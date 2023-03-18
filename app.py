@@ -22,7 +22,7 @@ def send_email(to_email):
     smtp_server = "smtp.gmail.com" 
     smtp_port = 587 
     smtp_username = "suhailskhan99@gmail.com" 
-    smtp_password = "SKHAN7574" 
+    smtp_password = "uaguyxagndgunwku" 
 
    
     message = MIMEMultipart()
@@ -43,17 +43,19 @@ def send_email(to_email):
         server.ehlo()
         server.login(smtp_username, smtp_password)
         server.sendmail(smtp_username, to_email, message.as_string())
+        print(smtp_username,smtp_password)
 
 
-
+email = None
 
 @app.route('/add', methods=['POST'])
 def add():
+    global email
     email = request.form['email']
     dose = request.form['dose']
     frequency = request.form['frequency']
-    start_date = datetime.strptime(request.form['start_date'], '%Y-%m-%d')
-    end_date = datetime.strptime(request.form['end_date'], '%Y-%m-%d')
+    start_date = datetime.strptime(str(request.form['start_date']), '%Y-%m-%d')
+    end_date = datetime.strptime(str(request.form['end_date']), '%Y-%m-%d')
     time = request.form['time']
     conn = sqlite3.connect('medications.db')
     c = conn.cursor()
@@ -61,7 +63,6 @@ def add():
               (email, dose, frequency, start_date, end_date,time))
     conn.commit()
     conn.close()
-    send_email(email)
     return redirect('/')
 
 @app.route('/medications')
@@ -85,19 +86,29 @@ def delete(id):
 @app.route('/reminder')
 def reminder():
     now = datetime.now()
+    print("Now:",now)
     conn = sqlite3.connect('medications.db')
     c = conn.cursor()
     c.execute('SELECT * FROM medications')
     meds = c.fetchall()
     reminders = []
     for med in meds:
-        start_date = datetime.strptime(str(med[4]), '%Y-%m-%d %H:%M:%S')
-        end_date = datetime.strptime(str(med[5]), '%Y-%m-%d %H:%M:%S')
+        start_date = datetime.strftime(med[4], '%Y-%m-%d %H:%M:%S')
+        start_date_strip = start_date.replace('-','')
+        start_date_strip = start_date.replace(':','')
+        start_date_strip = start_date.replace(' ','')
+        end_date = datetime.strftime(med[5], '%Y-%m-%d %H:%M:%S')
+        end_date_strip = end_date.replace('-','')
+        end_date_strip = end_date.replace(':','')
+        end_date_strip = end_date.replace(' ','')
+        print(start_date)
+        print(type(end_date))
         if start_date <= now <= end_date:
             days_since_start = (now - start_date).days
-            if days_since_start % med[3] == 0:
-                time_due = start_date + timedelta(days=days_since_start, hours=med[2])
-                reminder = (med[0], med[1], time_due)
+            if days_since_start % int(start_date_strip) == 0:
+                time_due = start_date + timedelta(days=days_since_start, hours=med[3])
+                reminder = (med[1], med[2], time_due)
+                send_email(email)
                 reminders.append(reminder)
     conn.close()
     return render_template('reminder.html', reminders=reminders)
