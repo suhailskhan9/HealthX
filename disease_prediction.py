@@ -2,7 +2,9 @@
 # from tkinter import messagebox
 import numpy as np
 import pandas as pd
-
+from flask import Flask, render_template , request , redirect , url_for, session
+# from db import *
+web = Flask(__name__)
 l1=['itching','skin_rash','nodal_skin_eruptions','continuous_sneezing','shivering','chills','joint_pain',
     'stomach_pain','acidity','ulcers_on_tongue','muscle_wasting','vomiting','burning_micturition','spotting_ urination','fatigue',
     'weight_gain','anxiety','cold_hands_and_feets','mood_swings','weight_loss','restlessness','lethargy','patches_in_throat',
@@ -70,44 +72,47 @@ X= df[l1]
 y = df[["prognosis"]]
 np.ravel(y)
 
-def message():
-    if (Symptom1.get() == "None" and  Symptom2.get() == "None" and Symptom3.get() == "None" and Symptom4.get() == "None" and Symptom5.get() == "None"):
-        messagebox.showinfo("OPPS!!", "ENTER  SYMPTOMS PLEASE")
-    else :
-        NaiveBayes()
+@web.route("/")
+def predict():
+    return render_template("predictor_1.html",data=l1)
+# def message():
+#     if (Symptom1.get() == "None" and  Symptom2.get() == "None" and Symptom3.get() == "None" and Symptom4.get() == "None" and Symptom5.get() == "None"):
+#         messagebox.showinfo("OPPS!!", "ENTER  SYMPTOMS PLEASE")
+#     else :
+#         NaiveBayes()
 
-def NaiveBayes():
-    from sklearn.naive_bayes import MultinomialNB
-    gnb = MultinomialNB()
-    gnb=gnb.fit(X,np.ravel(y))
-    from sklearn.metrics import accuracy_score
-    y_pred = gnb.predict(X_test)
-    print(accuracy_score(y_test, y_pred))
-    print(accuracy_score(y_test, y_pred, normalize=False))
+# def NaiveBayes():
+#     from sklearn.naive_bayes import MultinomialNB
+#     gnb = MultinomialNB()
+#     gnb=gnb.fit(X,np.ravel(y))
+#     from sklearn.metrics import accuracy_score
+#     y_pred = gnb.predict(X_test)
+#     print(accuracy_score(y_test, y_pred))
+#     print(accuracy_score(y_test, y_pred, normalize=False))
 
-    psymptoms = [Symptom1.get(),Symptom2.get(),Symptom3.get(),Symptom4.get(),Symptom5.get()]
+#     psymptoms = [Symptom1.get(),Symptom2.get(),Symptom3.get(),Symptom4.get(),Symptom5.get()]
 
-    for k in range(0,len(l1)):
-        for z in psymptoms:
-            if(z==l1[k]):
-                l2[k]=1
+#     for k in range(0,len(l1)):
+#         for z in psymptoms:
+#             if(z==l1[k]):
+#                 l2[k]=1
 
-    inputtest = [l2]
-    predict = gnb.predict(inputtest)
-    predicted=predict[0]
+#     inputtest = [l2]
+#     predict = gnb.predict(inputtest)
+#     predicted=predict[0]
 
-    h='no'
-    for a in range(0,len(disease)):
-        if(disease[predicted] == disease[a]):
-            h='yes'
-            break
+#     h='no'
+#     for a in range(0,len(disease)):
+#         if(disease[predicted] == disease[a]):
+#             h='yes'
+#             break
 
-    if (h=='yes'):
-        t3.delete("1.0", END)
-        t3.insert(END, disease[a])
-    else:
-        t3.delete("1.0", END)
-        t3.insert(END, "No Disease")
+#     if (h=='yes'):
+#         t3.delete("1.0", END)
+#         t3.insert(END, disease[a])
+#     else:
+#         t3.delete("1.0", END)
+#         t3.insert(END, "No Disease")
 
 # root = Tk()
 # root.title(" Disease Prediction From Symptoms")
