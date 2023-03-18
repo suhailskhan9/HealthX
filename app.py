@@ -93,18 +93,23 @@ def reminder():
     meds = c.fetchall()
     reminders = []
     for med in meds:
-        start_date = datetime.strftime(med[4], '%Y-%m-%d %H:%M:%S')
-        start_date_strip = start_date.replace('-','')
-        start_date_strip = start_date.replace(':','')
-        start_date_strip = start_date.replace(' ','')
-        end_date = datetime.strftime(med[5], '%Y-%m-%d %H:%M:%S')
-        end_date_strip = end_date.replace('-','')
-        end_date_strip = end_date.replace(':','')
-        end_date_strip = end_date.replace(' ','')
+        start_date = datetime.strptime(str(med[4]), '%Y-%m-%d %H:%M:%S')
+        end_date = datetime.strptime(str(med[5]), '%Y-%m-%d %H:%M:%S')
         print(start_date)
-        print(type(end_date))
+        print(type(start_date))
+        
+        
+        # print(type(end_date_strip))
         if start_date <= now <= end_date:
             days_since_start = (now - start_date).days
+            start_date_strip = str(datetime.strptime(str(med[4]), '%Y-%m-%d %H:%M:%S'))
+            print(start_date)
+            
+            start_date_strip = start_date_strip.replace('-','')
+            start_date_strip = start_date_strip.replace(' ','')
+            start_date_strip = start_date_strip.replace(':','')
+            print(start_date_strip)
+            
             if days_since_start % int(start_date_strip) == 0:
                 time_due = start_date + timedelta(days=days_since_start, hours=med[3])
                 reminder = (med[1], med[2], time_due)
