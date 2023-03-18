@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 from flask import Flask, render_template , request , redirect , url_for, session
 # from db import *
-web = Flask(__name__)
+disease_prediction = Flask(__name__)
 l1=['itching','skin_rash','nodal_skin_eruptions','continuous_sneezing','shivering','chills','joint_pain',
     'stomach_pain','acidity','ulcers_on_tongue','muscle_wasting','vomiting','burning_micturition','spotting_ urination','fatigue',
     'weight_gain','anxiety','cold_hands_and_feets','mood_swings','weight_loss','restlessness','lethargy','patches_in_throat',
@@ -72,7 +72,7 @@ X= df[l1]
 y = df[["prognosis"]]
 np.ravel(y)
 
-@web.route("/")
+@disease_prediction.route("/")
 def predict():
     return render_template("predictor_1.html",data=l1)
 # def message():
