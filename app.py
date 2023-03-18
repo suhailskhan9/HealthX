@@ -3,11 +3,13 @@ from flask import Flask, render_template, request, redirect
 import sqlite3
 import smtplib
 import os
+import numpy as np
+import pandas as pd
 from datetime import datetime, timedelta, date
 import threading
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-
+from sklearn.naive_bayes import MultinomialNB
 app = Flask(__name__)
 
 @app.route("/")
@@ -18,8 +20,8 @@ def send_email(to_email):
     
     smtp_server = "smtp.gmail.com" 
     smtp_port = 587 
-    smtp_username = "suhailskhan99@gmail.com" 
-    smtp_password = "uaguyxagndgunwku"
+    smtp_username = "healthxnoreply@gmail.com" 
+    smtp_password = "nsmtdnziqnvbveqr"
    
     message = MIMEMultipart()
     message['From'] = smtp_username
@@ -67,21 +69,7 @@ def add():
 @app.route("/medications/")
 def medications():
     print("hello world")
-    # conn = sqlite3.connect('medications.db')
-    # c = conn.cursor()
-    # c.execute('SELECT * FROM medications')
-    # meds = c.fetchall()
-    # conn.close()
     return render_template("medications.html")
-
-@app.route('/delete/<int:id>')
-def delete(id):
-    conn = sqlite3.connect('medications.db')
-    c = conn.cursor()
-    c.execute('DELETE FROM medications WHERE id = ?', (id,))
-    conn.commit()
-    conn.close()
-    return redirect('/medications')
 
 def reminder():
     while(True):
