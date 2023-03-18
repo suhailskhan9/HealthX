@@ -2,6 +2,7 @@
 from flask import Flask, render_template, request, redirect
 import sqlite3
 import smtplib
+import os
 from datetime import datetime, timedelta
 
 from email.mime.multipart import MIMEMultipart
@@ -17,26 +18,25 @@ def home():
 
 
 def send_email(to_email):
-    # Set up SMTP server
-    smtp_server = "smtp.sendgrid.net" # Replace with your email provider's SMTP server
-    smtp_port = 587 # Replace with your email provider's SMTP port
-    smtp_username = "apikey" # Replace with your email address
-    smtp_password = "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" # Replace with your email password
+    
+    smtp_server = "smtp.gmail.com" 
+    smtp_port = 587 
+    smtp_username = "suhailskhan99@gmail.com" 
+    smtp_password = "SKHAN7574" 
 
-    # Create message object
+   
     message = MIMEMultipart()
     message['From'] = smtp_username
     message['To'] = to_email
     message['Subject'] = "Medication Reminder"
 
-    # Construct message body
+   
     message_body = f"Reminder: It's time to take your medicine)."
     # message_body = f"Reminder: It's time to take {med_name} ({med_dose})."
 
-    # Attach message body as plain text
     message.attach(MIMEText(message_body, 'plain'))
 
-    # Send email
+    
     with smtplib.SMTP(smtp_server, smtp_port) as server:
         server.ehlo()
         server.starttls()
@@ -57,8 +57,8 @@ def add():
     time = request.form['time']
     conn = sqlite3.connect('medications.db')
     c = conn.cursor()
-    c.execute('INSERT INTO medications (email, dose, frequency, start_date, end_date) VALUES (?, ?, ?, ?, ?)',
-              (email, dose, frequency, start_date, end_date))
+    c.execute('INSERT INTO medications (email, dose, frequency, start_date, end_date,time) VALUES (?, ?, ?, ?, ?,?)',
+              (email, dose, frequency, start_date, end_date,time))
     conn.commit()
     conn.close()
     send_email(email)
@@ -101,39 +101,6 @@ def reminder():
                 reminders.append(reminder)
     conn.close()
     return render_template('reminder.html', reminders=reminders)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# @app.route('/submit', methods=['POST'])
-# def submit():
-#     # Get form data
-#     name = request.form['name']
-#     email = request.form['email']
-#     med_name = request.form['med_name']
-#     med_dose = request.form['med_dose']
-
-
-#     # Save data to database
-#     db.add_medication(name, email, med_name, med_dose, time)
-
-#     # Send email reminder
-#     send_email(email, med_name, med_dose)
-
-#     # Redirect to success page
-#     return render_template('success.html', message='Medication reminder set successfully!')
 
 
 

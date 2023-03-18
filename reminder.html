@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Medication Reminder</title>
+</head>
+<body>
+	<h1>Medication Reminder</h1>
+	{% if reminders %}
+	<ul>
+		{% for reminder in reminders %}
+		<li>{{ reminder[0] }} - {{ reminder[1] }} - {{ reminder[2] }}</li>
+		{% endfor %}
+	</ul>
+	{% else %}
+	<p>No medications due.</p>
+	{% endif %}
+	<a href="/">Home</a>
+</body>
+</html>
