@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Visualization</title>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+<script defer src="https://pyscript.net/latest/pyscript.js"></script>
+<py-env>
+    -matplotlib
+</py-env>
+</head>
+<body>
+    <h1>Matplotlib</h1>
+    <div id="countplot"></div>
+    <py-script output="lineplot">
+        import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+df = pd.read_csv("download.csv")
+
+plt.xlabel("Deaths")
+plt.ylabel("Disease")
+x=df["disease"].where(df['status']=="death").value_counts()
+plt.barh(x.index,x)
+   </py-script>
+</body>
+</html>
