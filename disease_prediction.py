@@ -3,6 +3,7 @@
 import numpy as np
 import pandas as pd
 from flask import Flask, render_template , request , redirect , url_for, session
+from sklearn.naive_bayes import MultinomialNB
 # from db import *
 disease_prediction = Flask(__name__)
 l1=['itching','skin_rash','nodal_skin_eruptions','continuous_sneezing','shivering','chills','joint_pain',
@@ -72,47 +73,88 @@ X= df[l1]
 y = df[["prognosis"]]
 np.ravel(y)
 
-@disease_prediction.route("/")
+@disease_prediction.route("/predict/")
 def predict():
-    return render_template("predictor_1.html",data=l1)
+    return render_template("predictor_1.html",l1=l1)
+@disease_prediction.route("/symget/",methods=["POST"])
+def getsym():
+    s1 = request.form.get("sym1")
+    s2=request.form.get("sym2")
+    s3=request.form.get("sym3")
+    s4=request.form.get("sym4")
+    s5=request.form.get("sym5")
+    gnb = MultinomialNB()
+    gnb=gnb.fit(X,np.ravel(y))
+    from sklearn.metrics import accuracy_score
+    y_pred = gnb.predict(X_test)
+    print(accuracy_score(y_test, y_pred))
+    print(accuracy_score(y_test, y_pred, normalize=False))
+
+    psymptoms = [s1,s2,s3,s4,s5]
+
+    for k in range(0,len(l1)):
+        for z in psymptoms:
+            if(z==l1[k]):
+                l2[k]=1
+
+    inputtest = [l2]
+    predict = gnb.predict(inputtest)
+    predicted=predict[0]
+
+    h='no'
+    for a in range(0,len(disease)):
+        if(disease[predicted] == disease[a]):
+            h='yes'
+            break
+    if (h=='yes'):
+        t3=disease[a]
+        return redirect("pre_ans",t3=t3)
+    else:
+        t3="No Disease"
+        return redirect("/pre_ans/",t3=t3)
+@disease_prediction.route("/pre_ans/")
+def pre_ans(ans):
+    return render_template("predict_ans.html",ans=ans)
+if __name__ == "__main__":
+    disease_prediction.run(debug=True)
 # def message():
 #     if (Symptom1.get() == "None" and  Symptom2.get() == "None" and Symptom3.get() == "None" and Symptom4.get() == "None" and Symptom5.get() == "None"):
 #         messagebox.showinfo("OPPS!!", "ENTER  SYMPTOMS PLEASE")
 #     else :
 #         NaiveBayes()
 
-# def NaiveBayes():
-#     from sklearn.naive_bayes import MultinomialNB
-#     gnb = MultinomialNB()
-#     gnb=gnb.fit(X,np.ravel(y))
-#     from sklearn.metrics import accuracy_score
-#     y_pred = gnb.predict(X_test)
-#     print(accuracy_score(y_test, y_pred))
-#     print(accuracy_score(y_test, y_pred, normalize=False))
+def NaiveBayes():
+    from sklearn.naive_bayes import MultinomialNB
+    gnb = MultinomialNB()
+    gnb=gnb.fit(X,np.ravel(y))
+    from sklearn.metrics import accuracy_score
+    y_pred = gnb.predict(X_test)
+    print(accuracy_score(y_test, y_pred))
+    print(accuracy_score(y_test, y_pred, normalize=False))
 
-#     psymptoms = [Symptom1.get(),Symptom2.get(),Symptom3.get(),Symptom4.get(),Symptom5.get()]
+    psymptoms = [Symptom1.get(),Symptom2.get(),Symptom3.get(),Symptom4.get(),Symptom5.get()]
 
-#     for k in range(0,len(l1)):
-#         for z in psymptoms:
-#             if(z==l1[k]):
-#                 l2[k]=1
+    for k in range(0,len(l1)):
+        for z in psymptoms:
+            if(z==l1[k]):
+                l2[k]=1
 
-#     inputtest = [l2]
-#     predict = gnb.predict(inputtest)
-#     predicted=predict[0]
+    inputtest = [l2]
+    predict = gnb.predict(inputtest)
+    predicted=predict[0]
 
-#     h='no'
-#     for a in range(0,len(disease)):
-#         if(disease[predicted] == disease[a]):
-#             h='yes'
-#             break
+    h='no'
+    for a in range(0,len(disease)):
+        if(disease[predicted] == disease[a]):
+            h='yes'
+            break
 
-#     if (h=='yes'):
-#         t3.delete("1.0", END)
-#         t3.insert(END, disease[a])
-#     else:
-#         t3.delete("1.0", END)
-#         t3.insert(END, "No Disease")
+    if (h=='yes'):
+        t3.delete("1.0", END)
+        t3.insert(END, disease[a])
+    else:
+        t3.delete("1.0", END)
+        t3.insert(END, "No Disease")
 
 # root = Tk()
 # root.title(" Disease Prediction From Symptoms")
