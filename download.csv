@@ -1,0 +1,343 @@
+Location,Year,Cause of death or injury,Measure,Value,Lower bound,Upper bound,,Age1,Gender,disease,,,,status
+India,2005,Tuberculosis,Percent of total DALYs,0.033488816,0.029381547,0.037956707,,44,female,Road Injuries,,,,death
+India,2016,Tuberculosis,DALYs annual % change,-0.03499981,,,,54,male,Conflict and Terrorism,,,,death
+India,2011,HIV/AIDS,Percent of total DALYs,0.005560439,0.0046629,0.006690748,,62,male,"Fire, Heat, and Hot Substances",,,,recovered
+India,2019,HIV/AIDS,DALYs annual % change,0.095764748,,,,50,male,Protein-Energy Malnutrition,,,,death
+India,2013,Diarrheal diseases,Percent of total DALYs,0.043010121,0.029812373,0.065088729,,49,female,Diabetes Mellitus,,,,death
+India,2014,Diarrheal diseases,DALYs annual % change,-0.052070547,,,,39,male,Chronic Kidney Disease,,,,recovered
+India,2021,Other intestinal infectious diseases,Percent of total DALYs,2.81E-05,1.95E-05,3.82E-05,,58,male,Neoplasms,,,,recovered
+India,2016,Other intestinal infectious diseases,DALYs annual % change,-0.066917645,,,,41,male,Acute Hepatitis,,,,recovered
+India,2021,Lower respiratory infections,Percent of total DALYs,0.039668417,0.034115486,0.045776855,,39,male,Conflict and Terrorism,,,,recovered
+India,2019,Lower respiratory infections,DALYs annual % change,-0.052170849,,,,56,female,Maternal Disorders,,,,recovered
+India,2018,Upper respiratory infections,Percent of total DALYs,0.002038287,0.001336498,0.002942379,,31,female,Meningitis,,,,recovered
+India,2021,Upper respiratory infections,DALYs annual % change,-0.012374545,,,,34,male,Meningitis,,,,recovered
+India,2006,Otitis media,Percent of total DALYs,0.001271352,0.000787268,0.001944535,,59,female,Diabetes Mellitus,,,,death
+India,2021,Otitis media,DALYs annual % change,-0.014560675,,,,30,male,Alzheimer's Disease and Other Dementias,,,,recovered
+India,2011,Meningitis,Percent of total DALYs,0.004691762,0.004035777,0.005427507,,43,male,Nutritional Deficiencies,,,,recovered
+India,2008,Meningitis,DALYs annual % change,-0.058762913,,,,34,female,Poisonings,,,,recovered
+India,2008,Encephalitis,Percent of total DALYs,0.005186712,0.004058493,0.008705686,,49,male,Conflict and Terrorism,,,,death
+India,2017,Encephalitis,DALYs annual % change,-0.04548858,,,,50,male,Diabetes Mellitus,,,,recovered
+India,2015,Diphtheria,Percent of total DALYs,1.28E-05,9.63E-06,1.73E-05,,74,male,Exposure to Forces of Nature,,,,death
+India,2012,Diphtheria,DALYs annual % change,-0.160624118,,,,55,female,Cardiovascular Diseases,,,,recovered
+India,2011,Whooping cough,Percent of total DALYs,0.003250029,0.000426378,0.008997528,,69,male,Conflict and Terrorism,,,,recovered
+India,2021,Whooping cough,DALYs annual % change,-0.066402588,,,,59,male,Drug Use Disorders,,,,recovered
+India,2013,Tetanus,Percent of total DALYs,0.001108212,0.000706621,0.001669004,,59,male,Road Injuries,,,,recovered
+India,2017,Tetanus,DALYs annual % change,-0.116091144,,,,50,male,Digestive Diseases,,,,recovered
+India,2005,Measles,Percent of total DALYs,0.000899812,0.000288063,0.002131253,,65,female,Acute Hepatitis,,,,death
+India,2022,Measles,DALYs annual % change,-0.136177501,,,,42,male,Parkinson's Disease,,,,death
+India,2022,Varicella and herpes zoster,Percent of total DALYs,0.000363683,0.000309083,0.000430664,,34,female,Environmental Heat and Cold Exposure,,,,recovered
+India,2019,Varicella and herpes zoster,DALYs annual % change,-0.034416071,,,,33,male,Lower Respiratory Infections,,,,death
+India,2021,Malaria,Percent of total DALYs,0.004746301,0.001904457,0.01078736,,55,male,Neonatal Disorders,,,,recovered
+India,2015,Malaria,DALYs annual % change,-0.077617467,,,,64,male,Conflict and Terrorism,,,,recovered
+India,2022,Chagas disease,Percent of total DALYs,0,0,0,,47,male,Alcohol Use Disorders,,,,recovered
+India,2017,Chagas disease,DALYs annual % change,0,,,,62,female,Chronic Kidney Disease,,,,death
+India,2022,Leishmaniasis,Percent of total DALYs,0.000172894,1.42E-06,0.00104164,,50,male,Diabetes Mellitus,,,,recovered
+India,2015,Leishmaniasis,DALYs annual % change,-0.112090435,,,,66,male,Maternal Disorders,,,,death
+India,2008,African trypanosomiasis,Percent of total DALYs,0,0,0,,41,male,Road Injuries,,,,recovered
+India,2020,African trypanosomiasis,DALYs annual % change,0,,,,46,male,Drug Use Disorders,,,,death
+India,2017,Schistosomiasis,Percent of total DALYs,0,0,0,,63,male,HIV/AIDS,,,,recovered
+India,2014,Schistosomiasis,DALYs annual % change,0,,,,64,female,Road Injuries,,,,recovered
+India,2010,Cysticercosis,Percent of total DALYs,0.000801579,0.000495703,0.001173164,,78,male,"Fire, Heat, and Hot Substances",,,,recovered
+India,2021,Cysticercosis,DALYs annual % change,-0.005036824,,,,55,male,Cardiovascular Diseases,,,,death
+India,2016,Cystic echinococcosis,Percent of total DALYs,3.44E-05,2.57E-05,4.32E-05,,67,female,Nutritional Deficiencies,,,,recovered
+India,2011,Cystic echinococcosis,DALYs annual % change,-0.04451247,,,,32,female,Alzheimer's Disease and Other Dementias,,,,death
+India,2013,Lymphatic filariasis,Percent of total DALYs,0.001737003,0.001085095,0.002722455,,67,male,Cirrhosis and Other Chronic Liver Diseases,,,,death
+India,2009,Lymphatic filariasis,DALYs annual % change,-0.049718297,,,,72,male,Alzheimer's Disease and Other Dementias,,,,death
+India,2021,Onchocerciasis,Percent of total DALYs,0,0,0,,66,female,Acute Hepatitis,,,,death
+India,2020,Onchocerciasis,DALYs annual % change,0,,,,77,female,Environmental Heat and Cold Exposure,,,,death
+India,2010,Trachoma,Percent of total DALYs,0.000107368,6.93E-05,0.0001591,,39,male,Chronic Kidney Disease,,,,recovered
+India,2005,Trachoma,DALYs annual % change,-0.048544535,,,,46,female,Cirrhosis and Other Chronic Liver Diseases,,,,death
+India,2022,Dengue,Percent of total DALYs,0.002278064,0.000465233,0.003555145,,70,female,Meningitis,,,,recovered
+India,2013,Dengue,DALYs annual % change,-5.85E-06,,,,46,female,HIV/AIDS,,,,recovered
+India,2022,Yellow fever,Percent of total DALYs,0,0,0,,57,female,Diarrheal Diseases,,,,death
+India,2021,Yellow fever,DALYs annual % change,0,,,,30,female,Alcohol Use Disorders,,,,death
+India,2009,Rabies,Percent of total DALYs,0.000548762,0.000215584,0.000735361,,72,male,Chronic Respiratory Diseases,,,,death
+India,2008,Rabies,DALYs annual % change,-0.053632651,,,,56,male,Parkinson's Disease,,,,recovered
+India,2018,Intestinal nematode infections,Percent of total DALYs,0.000757483,0.000461604,0.00118104,,56,male,Diarrheal Diseases,,,,death
+India,2006,Intestinal nematode infections,DALYs annual % change,-0.066730482,,,,66,female,Protein-Energy Malnutrition,,,,recovered
+India,2019,Food-borne trematodiases,Percent of total DALYs,0,0,0,,35,female,Neonatal Disorders,,,,recovered
+India,2021,Food-borne trematodiases,DALYs annual % change,0,,,,53,female,Diarrheal Diseases,,,,death
+India,2015,Other neglected tropical diseases,Percent of total DALYs,0.001765835,0.001327242,0.002262774,,58,male,Chronic Respiratory Diseases,,,,death
+India,2022,Other neglected tropical diseases,DALYs annual % change,-0.012040314,,,,53,male,Drowning,,,,death
+India,2019,Maternal disorders,Percent of total DALYs,0.006079097,0.004936766,0.007339684,,42,female,Acute Hepatitis,,,,death
+India,2005,Maternal disorders,DALYs annual % change,-0.047377035,,,,53,male,Parkinson's Disease,,,,recovered
+India,2016,Neonatal disorders,Percent of total DALYs,0.092468523,0.076978205,0.111079198,,53,female,Protein-Energy Malnutrition,,,,death
+India,2011,Neonatal disorders,DALYs annual % change,-0.036696588,,,,56,male,Self-harm,,,,death
+India,2010,Protein-energy malnutrition,Percent of total DALYs,0.005484969,0.004257039,0.006950032,,29,male,Malaria,,,,death
+India,2006,Protein-energy malnutrition,DALYs annual % change,-0.084273652,,,,26,male,HIV/AIDS,,,,recovered
+India,2013,Iodine deficiency,Percent of total DALYs,0.002340919,0.001441766,0.003819099,,40,male,Interpersonal Violence,,,,recovered
+India,2011,Iodine deficiency,DALYs annual % change,-0.023996728,,,,26,male,Environmental Heat and Cold Exposure,,,,death
+India,2017,Vitamin A deficiency,Percent of total DALYs,0.000632939,0.000445646,0.000858082,,42,female,Diabetes Mellitus,,,,recovered
+India,2016,Vitamin A deficiency,DALYs annual % change,-0.045751736,,,,28,male,Alzheimer's Disease and Other Dementias,,,,recovered
+India,2020,Dietary iron deficiency,Percent of total DALYs,0.024799387,0.018057082,0.033102248,,43,male,Tuberculosis,,,,recovered
+India,2008,Dietary iron deficiency,DALYs annual % change,-0.007810999,,,,81,male,Interpersonal Violence,,,,death
+India,2016,Other nutritional deficiencies,Percent of total DALYs,0.001685605,0.001329791,0.002129871,,65,male,Diarrheal Diseases,,,,recovered
+India,2018,Other nutritional deficiencies,DALYs annual % change,-0.066589248,,,,62,female,Cardiovascular Diseases,,,,recovered
+India,2008,Sexually transmitted infections excluding HIV,Percent of total DALYs,0.001843663,0.000934056,0.003519435,,57,female,Neonatal Disorders,,,,death
+India,2006,Sexually transmitted infections excluding HIV,DALYs annual % change,-0.037591895,,,,71,female,Diabetes Mellitus,,,,recovered
+India,2019,Acute hepatitis,Percent of total DALYs,0.004214876,0.002929393,0.005774399,,50,male,Road Injuries,,,,death
+India,2012,Acute hepatitis,DALYs annual % change,-0.04452288,,,,69,male,Chronic Kidney Disease,,,,recovered
+India,2021,Leprosy,Percent of total DALYs,3.01E-05,2.04E-05,4.11E-05,,68,male,Alzheimer's Disease and Other Dementias,,,,recovered
+India,2007,Leprosy,DALYs annual % change,-0.036992746,,,,27,female,Environmental Heat and Cold Exposure,,,,recovered
+India,2017,Other unspecified infectious diseases,Percent of total DALYs,0.002652343,0.002070398,0.003128312,,50,male,Cirrhosis and Other Chronic Liver Diseases,,,,recovered
+India,2020,Other unspecified infectious diseases,DALYs annual % change,-0.01957843,,,,38,male,Digestive Diseases,,,,death
+India,2008,Esophageal cancer,Percent of total DALYs,0.002257977,0.001877828,0.003199429,,72,male,Drug Use Disorders,,,,death
+India,2021,Esophageal cancer,DALYs annual % change,0.006596315,,,,73,male,Digestive Diseases,,,,death
+India,2012,Stomach cancer,Percent of total DALYs,0.004938434,0.004237477,0.005657489,,75,male,Poisonings,,,,death
+India,2005,Stomach cancer,DALYs annual % change,-0.001018537,,,,49,male,Conflict and Terrorism,,,,death
+India,2010,Liver cancer,Percent of total DALYs,0.001806086,0.001548726,0.002092624,,70,female,Cirrhosis and Other Chronic Liver Diseases,,,,recovered
+India,2017,Liver cancer,DALYs annual % change,0.011185422,,,,56,male,Lower Respiratory Infections,,,,recovered
+India,2019,Larynx cancer,Percent of total DALYs,0.00179814,0.001519245,0.002100161,,27,male,Diabetes Mellitus,,,,death
+India,2006,Larynx cancer,DALYs annual % change,0.002864546,,,,73,female,Diabetes Mellitus,,,,recovered
+India,2018,"Tracheal, bronchus, and lung cancer",Percent of total DALYs,0.004869303,0.004033311,0.005669076,,53,female,Poisonings,,,,death
+India,2010,"Tracheal, bronchus, and lung cancer",DALYs annual % change,0.018337583,,,,48,female,Malaria,,,,death
+India,2006,Breast cancer,Percent of total DALYs,0.005775339,0.004432127,0.007352906,,79,male,Poisonings,,,,recovered
+India,2021,Breast cancer,DALYs annual % change,0.019628324,,,,77,female,Environmental Heat and Cold Exposure,,,,recovered
+India,2012,Cervical cancer,Percent of total DALYs,0.00332915,0.002595314,0.004502364,,45,male,Diabetes Mellitus,,,,recovered
+India,2018,Cervical cancer,DALYs annual % change,-0.002532283,,,,66,male,Neonatal Disorders,,,,recovered
+India,2010,Uterine cancer,Percent of total DALYs,0.000387257,0.000280688,0.000489266,,69,female,"Fire, Heat, and Hot Substances",,,,recovered
+India,2021,Uterine cancer,DALYs annual % change,0.014124233,,,,65,female,Neonatal Disorders,,,,recovered
+India,2018,Prostate cancer,Percent of total DALYs,0.001241709,0.000997023,0.001610265,,82,male,Maternal Disorders,,,,death
+India,2017,Prostate cancer,DALYs annual % change,0.016564545,,,,58,female,Digestive Diseases,,,,death
+India,2016,Colon and rectum cancer,Percent of total DALYs,0.004278402,0.003602072,0.004984458,,39,male,Drowning,,,,death
+India,2017,Colon and rectum cancer,DALYs annual % change,0.022317026,,,,70,male,Exposure to Forces of Nature,,,,recovered
+India,2014,Lip and oral cavity cancer,Percent of total DALYs,0.004114512,0.003418486,0.004872657,,39,female,HIV/AIDS,,,,recovered
+India,2020,Lip and oral cavity cancer,DALYs annual % change,0.011491703,,,,67,female,Exposure to Forces of Nature,,,,recovered
+India,2007,Nasopharynx cancer,Percent of total DALYs,0.000830728,0.000713658,0.000958858,,26,female,Alcohol Use Disorders,,,,recovered
+India,2007,Nasopharynx cancer,DALYs annual % change,-0.002416938,,,,79,female,Nutritional Deficiencies,,,,recovered
+India,2017,Other pharynx cancer,Percent of total DALYs,0.003500752,0.002940439,0.004149298,,81,male,Conflict and Terrorism,,,,recovered
+India,2017,Other pharynx cancer,DALYs annual % change,0.014563535,,,,63,male,Cardiovascular Diseases,,,,death
+India,2008,Gallbladder and biliary tract cancer,Percent of total DALYs,0.00148181,0.001088165,0.001747956,,73,male,Drowning,,,,death
+India,2020,Gallbladder and biliary tract cancer,DALYs annual % change,0.024077813,,,,42,male,Parkinson's Disease,,,,death
+India,2022,Pancreatic cancer,Percent of total DALYs,0.001734303,0.001510347,0.002003897,,68,female,Digestive Diseases,,,,death
+India,2007,Pancreatic cancer,DALYs annual % change,0.037513519,,,,38,male,Drug Use Disorders,,,,recovered
+India,2007,Malignant skin melanoma,Percent of total DALYs,0.000124238,8.70E-05,0.000152566,,35,female,Meningitis,,,,recovered
+India,2017,Malignant skin melanoma,DALYs annual % change,0.009792388,,,,36,male,Drowning,,,,recovered
+India,2019,Non-melanoma skin cancer,Percent of total DALYs,0.000152362,0.000122086,0.000180287,,45,male,Diabetes Mellitus,,,,recovered
+India,2018,Non-melanoma skin cancer,DALYs annual % change,0.012731335,,,,62,female,Digestive Diseases,,,,death
+India,2020,Ovarian cancer,Percent of total DALYs,0.001408518,0.001046767,0.001777998,,58,male,Cirrhosis and Other Chronic Liver Diseases,,,,death
+India,2006,Ovarian cancer,DALYs annual % change,0.028820599,,,,53,female,Diabetes Mellitus,,,,death
+India,2006,Testicular cancer,Percent of total DALYs,0.000195876,0.000162808,0.000231373,,37,female,Maternal Disorders,,,,death
+India,2011,Testicular cancer,DALYs annual % change,-0.000268431,,,,77,female,Interpersonal Violence,,,,recovered
+India,2007,Kidney cancer,Percent of total DALYs,0.000522629,0.000446296,0.000615089,,75,male,Neonatal Disorders,,,,recovered
+India,2017,Kidney cancer,DALYs annual % change,0.021884498,,,,73,male,Exposure to Forces of Nature,,,,death
+India,2020,Bladder cancer,Percent of total DALYs,0.000671233,0.000578173,0.000772236,,80,male,Meningitis,,,,recovered
+India,2017,Bladder cancer,DALYs annual % change,0.016113469,,,,42,male,Chronic Kidney Disease,,,,death
+India,2017,Brain and central nervous system cancer,Percent of total DALYs,0.002168679,0.001729638,0.002620853,,27,male,Protein-Energy Malnutrition,,,,death
+India,2015,Brain and central nervous system cancer,DALYs annual % change,-0.00399021,,,,47,female,Diarrheal Diseases,,,,recovered
+India,2017,Thyroid cancer,Percent of total DALYs,0.000465465,0.000390885,0.000544976,,71,male,Lower Respiratory Infections,,,,death
+India,2015,Thyroid cancer,DALYs annual % change,0.014989306,,,,32,female,Acute Hepatitis,,,,death
+India,2020,Mesothelioma,Percent of total DALYs,0.000142444,0.000110813,0.000192285,,67,female,Malaria,,,,recovered
+India,2018,Mesothelioma,DALYs annual % change,0.01901821,,,,79,male,Alcohol Use Disorders,,,,recovered
+India,2022,Hodgkin lymphoma,Percent of total DALYs,0.000415091,0.000337093,0.000538806,,80,male,Drowning,,,,death
+India,2007,Hodgkin lymphoma,DALYs annual % change,-0.019168654,,,,69,male,Lower Respiratory Infections,,,,death
+India,2015,Non-Hodgkin lymphoma,Percent of total DALYs,0.001902614,0.001620933,0.002230548,,77,female,Cardiovascular Diseases,,,,recovered
+India,2006,Non-Hodgkin lymphoma,DALYs annual % change,0.015858747,,,,52,male,Environmental Heat and Cold Exposure,,,,recovered
+India,2022,Multiple myeloma,Percent of total DALYs,0.000499665,0.00034814,0.000610788,,49,female,Environmental Heat and Cold Exposure,,,,death
+India,2010,Multiple myeloma,DALYs annual % change,0.017793607,,,,74,male,Parkinson's Disease,,,,death
+India,2019,Leukemia,Percent of total DALYs,0.002810677,0.002391219,0.003356156,,37,female,Chronic Kidney Disease,,,,recovered
+India,2020,Leukemia,DALYs annual % change,-0.0168768,,,,82,male,Conflict and Terrorism,,,,death
+India,2014,Other neoplasms,Percent of total DALYs,0.000191263,0.000165517,0.000228939,,29,female,Self-harm,,,,death
+India,2012,Other neoplasms,DALYs annual % change,0.022943741,,,,39,male,Poisonings,,,,recovered
+India,2020,Rheumatic heart disease,Percent of total DALYs,0.00977622,0.007848758,0.011534518,,47,male,Alcohol Use Disorders,,,,recovered
+India,2009,Rheumatic heart disease,DALYs annual % change,-0.014153384,,,,57,female,Lower Respiratory Infections,,,,recovered
+India,2019,Ischemic heart disease,Percent of total DALYs,0.079691676,0.069680287,0.090330759,,75,male,Digestive Diseases,,,,recovered
+India,2016,Ischemic heart disease,DALYs annual % change,0.009146604,,,,78,male,Interpersonal Violence,,,,recovered
+India,2022,Stroke,Percent of total DALYs,0.037091458,0.032652455,0.041933055,,49,male,HIV/AIDS,,,,recovered
+India,2019,Stroke,DALYs annual % change,0.00093483,,,,42,female,Malaria,,,,death
+India,2016,Hypertensive heart disease,Percent of total DALYs,0.004827564,0.003287675,0.006359174,,69,male,Drowning,,,,death
+India,2012,Hypertensive heart disease,DALYs annual % change,0.002800801,,,,47,male,Drowning,,,,recovered
+India,2021,Cardiomyopathy and myocarditis,Percent of total DALYs,0.000404606,0.000313063,0.000519944,,61,female,Cirrhosis and Other Chronic Liver Diseases,,,,recovered
+India,2014,Cardiomyopathy and myocarditis,DALYs annual % change,0.001139166,,,,82,female,"Fire, Heat, and Hot Substances",,,,death
+India,2007,Atrial fibrillation and flutter,Percent of total DALYs,0.002188853,0.001739072,0.002703116,,68,male,Cirrhosis and Other Chronic Liver Diseases,,,,death
+India,2006,Atrial fibrillation and flutter,DALYs annual % change,0.023756917,,,,43,female,Alcohol Use Disorders,,,,death
+India,2018,Aortic aneurysm,Percent of total DALYs,0.000801371,0.000589524,0.001003675,,79,female,"Fire, Heat, and Hot Substances",,,,recovered
+India,2018,Aortic aneurysm,DALYs annual % change,0.016254303,,,,71,female,Neonatal Disorders,,,,death
+India,2015,Peripheral artery disease,Percent of total DALYs,0.000183803,0.000132211,0.000254667,,33,male,Self-harm,,,,recovered
+India,2011,Peripheral artery disease,DALYs annual % change,0.025810171,,,,40,male,Drowning,,,,death
+India,2016,Endocarditis,Percent of total DALYs,0.000459519,0.000362633,0.000567358,,29,female,Nutritional Deficiencies,,,,death
+India,2018,Endocarditis,DALYs annual % change,0.004843614,,,,48,male,Exposure to Forces of Nature,,,,death
+India,2018,Non-rheumatic valvular heart disease,Percent of total DALYs,0.000562238,0.000422635,0.000702898,,53,female,Neoplasms,,,,recovered
+India,2017,Non-rheumatic valvular heart disease,DALYs annual % change,0.009978583,,,,66,female,Poisonings,,,,recovered
+India,2019,Chronic obstructive pulmonary disease,Percent of total DALYs,0.045463667,0.037256161,0.052030984,,32,male,Lower Respiratory Infections,,,,death
+India,2022,Chronic obstructive pulmonary disease,DALYs annual % change,0.005298788,,,,70,female,Chronic Respiratory Diseases,,,,death
+India,2013,Pneumoconiosis,Percent of total DALYs,0.000160898,0.00010159,0.000220901,,42,female,Drug Use Disorders,,,,death
+India,2005,Pneumoconiosis,DALYs annual % change,-0.00727403,,,,43,female,Protein-Energy Malnutrition,,,,death
+India,2022,Asthma,Percent of total DALYs,0.012481191,0.009312214,0.015543405,,70,male,Acute Hepatitis,,,,death
+India,2012,Asthma,DALYs annual % change,-0.011029496,,,,69,female,Cirrhosis and Other Chronic Liver Diseases,,,,death
+India,2016,Interstitial lung disease and pulmonary sarcoidosis,Percent of total DALYs,0.002809954,0.001860091,0.003877706,,42,female,Road Injuries,,,,death
+India,2012,Interstitial lung disease and pulmonary sarcoidosis,DALYs annual % change,0.014635424,,,,60,female,Road Injuries,,,,death
+India,2016,Other chronic respiratory diseases,Percent of total DALYs,0.001632794,0.001347841,0.001909502,,46,female,Neonatal Disorders,,,,recovered
+India,2019,Other chronic respiratory diseases,DALYs annual % change,0.008565744,,,,30,male,Interpersonal Violence,,,,death
+India,2021,Cirrhosis and other chronic liver diseases,Percent of total DALYs,0.020623625,0.017741138,0.024168648,,70,male,Drowning,,,,recovered
+India,2005,Cirrhosis and other chronic liver diseases,DALYs annual % change,0.000447621,,,,42,male,Protein-Energy Malnutrition,,,,death
+India,2021,Appendicitis,Percent of total DALYs,0.001064803,0.000828131,0.001286884,,33,female,Meningitis,,,,recovered
+India,2018,Appendicitis,DALYs annual % change,-0.032429952,,,,26,female,Interpersonal Violence,,,,death
+India,2013,Paralytic ileus and intestinal obstruction,Percent of total DALYs,0.0038131,0.00234928,0.004706709,,69,female,Lower Respiratory Infections,,,,recovered
+India,2021,Paralytic ileus and intestinal obstruction,DALYs annual % change,-0.010065541,,,,81,female,Chronic Respiratory Diseases,,,,death
+India,2013,"Inguinal, femoral, and abdominal hernia",Percent of total DALYs,0.001603675,0.00129222,0.00197432,,62,male,Protein-Energy Malnutrition,,,,recovered
+India,2018,"Inguinal, femoral, and abdominal hernia",DALYs annual % change,-0.015082678,,,,56,male,Parkinson's Disease,,,,recovered
+India,2018,Inflammatory bowel disease,Percent of total DALYs,0.000351569,0.000262019,0.000444681,,71,male,Cardiovascular Diseases,,,,recovered
+India,2018,Inflammatory bowel disease,DALYs annual % change,-0.008000926,,,,65,female,Alcohol Use Disorders,,,,death
+India,2013,Vascular intestinal disorders,Percent of total DALYs,0.000496952,0.000343116,0.000704889,,52,male,Lower Respiratory Infections,,,,recovered
+India,2008,Vascular intestinal disorders,DALYs annual % change,0.016511263,,,,59,male,"Fire, Heat, and Hot Substances",,,,death
+India,2019,Gallbladder and biliary diseases,Percent of total DALYs,0.001564701,0.001172719,0.002080928,,64,male,Drowning,,,,death
+India,2010,Gallbladder and biliary diseases,DALYs annual % change,0.004202624,,,,59,female,Digestive Diseases,,,,recovered
+India,2022,Pancreatitis,Percent of total DALYs,0.001532081,0.001176758,0.001888152,,40,male,Tuberculosis,,,,recovered
+India,2016,Pancreatitis,DALYs annual % change,0.001729349,,,,66,male,Cirrhosis and Other Chronic Liver Diseases,,,,death
+India,2014,Other digestive diseases,Percent of total DALYs,0.000245447,0.00020764,0.000286112,,80,female,Diabetes Mellitus,,,,death
+India,2021,Other digestive diseases,DALYs annual % change,-0.005086495,,,,48,female,Diabetes Mellitus,,,,recovered
+India,2020,Alzheimer's disease and other dementias,Percent of total DALYs,0.00454631,0.00187188,0.010741335,,49,male,Digestive Diseases,,,,death
+India,2012,Alzheimer's disease and other dementias,DALYs annual % change,0.031764342,,,,40,male,Drowning,,,,recovered
+India,2021,Parkinson's disease,Percent of total DALYs,0.001739784,0.001520075,0.00197081,,70,female,HIV/AIDS,,,,recovered
+India,2022,Parkinson's disease,DALYs annual % change,0.021246891,,,,56,male,Road Injuries,,,,death
+India,2021,Idiopathic epilepsy,Percent of total DALYs,0.00622297,0.005041551,0.007806484,,37,male,Environmental Heat and Cold Exposure,,,,recovered
+India,2005,Idiopathic epilepsy,DALYs annual % change,-0.015354411,,,,74,male,Malaria,,,,recovered
+India,2008,Multiple sclerosis,Percent of total DALYs,0.000241658,0.000206417,0.000290784,,78,female,Drug Use Disorders,,,,death
+India,2019,Multiple sclerosis,DALYs annual % change,0.012190637,,,,79,male,Malaria,,,,recovered
+India,2013,Motor neuron disease,Percent of total DALYs,0.00012393,0.000101336,0.000148704,,51,male,HIV/AIDS,,,,recovered
+India,2018,Motor neuron disease,DALYs annual % change,0.017737479,,,,83,female,Diabetes Mellitus,,,,death
+India,2016,Other neurological disorders,Percent of total DALYs,0.00128312,0.000950978,0.001687655,,46,male,Self-harm,,,,recovered
+India,2011,Other neurological disorders,DALYs annual % change,-0.000619715,,,,64,female,Alcohol Use Disorders,,,,recovered
+India,2010,Schizophrenia,Percent of total DALYs,0.005484978,0.003976,0.006861491,,65,male,Cardiovascular Diseases,,,,recovered
+India,2014,Schizophrenia,DALYs annual % change,0.00734117,,,,28,male,Alcohol Use Disorders,,,,recovered
+India,2009,Alcohol use disorders,Percent of total DALYs,0.005344771,0.004337628,0.006450519,,43,male,Alzheimer's Disease and Other Dementias,,,,death
+India,2017,Alcohol use disorders,DALYs annual % change,-0.003173563,,,,56,male,Conflict and Terrorism,,,,recovered
+India,2012,Drug use disorders,Percent of total DALYs,0.003262441,0.00253303,0.004196434,,36,female,Tuberculosis,,,,recovered
+India,2013,Drug use disorders,DALYs annual % change,0.008916378,,,,70,male,Environmental Heat and Cold Exposure,,,,death
+India,2010,Depressive disorders,Percent of total DALYs,0.018032406,0.01321729,0.023458677,,68,male,Diarrheal Diseases,,,,death
+India,2021,Depressive disorders,DALYs annual % change,0.002930883,,,,37,female,Acute Hepatitis,,,,death
+India,2012,Bipolar disorder,Percent of total DALYs,0.002290324,0.001468099,0.003334322,,35,male,HIV/AIDS,,,,death
+India,2020,Bipolar disorder,DALYs annual % change,0.005907326,,,,71,female,Cardiovascular Diseases,,,,recovered
+India,2010,Anxiety disorders,Percent of total DALYs,0.008420664,0.00627038,0.01116951,,28,male,Acute Hepatitis,,,,death
+India,2021,Anxiety disorders,DALYs annual % change,0.004743135,,,,29,male,Maternal Disorders,,,,death
+India,2006,Eating disorders,Percent of total DALYs,0.000907533,0.000590654,0.001304033,,47,male,Diarrheal Diseases,,,,recovered
+India,2006,Eating disorders,DALYs annual % change,0.016166463,,,,52,male,Acute Hepatitis,,,,death
+India,2021,Autism spectrum disorders,Percent of total DALYs,0.001308601,0.000928817,0.001840625,,50,male,Malaria,,,,recovered
+India,2006,Autism spectrum disorders,DALYs annual % change,-0.0014933,,,,77,male,Acute Hepatitis,,,,death
+India,2006,Attention-deficit/hyperactivity disorder,Percent of total DALYs,0.000222296,0.0001331,0.000364889,,78,male,Chronic Respiratory Diseases,,,,recovered
+India,2008,Attention-deficit/hyperactivity disorder,DALYs annual % change,-0.001320827,,,,26,female,Malaria,,,,recovered
+India,2015,Conduct disorder,Percent of total DALYs,0.002100328,0.001257288,0.003194882,,81,male,Diabetes Mellitus,,,,recovered
+India,2021,Conduct disorder,DALYs annual % change,-0.003037384,,,,52,male,HIV/AIDS,,,,recovered
+India,2021,Idiopathic developmental intellectual disability,Percent of total DALYs,0.005032152,0.003046676,0.007681188,,58,female,Digestive Diseases,,,,recovered
+India,2011,Idiopathic developmental intellectual disability,DALYs annual % change,-0.006382707,,,,51,female,Acute Hepatitis,,,,recovered
+India,2016,Other mental disorders,Percent of total DALYs,0.002891184,0.001934226,0.004232262,,83,female,Exposure to Forces of Nature,,,,death
+India,2006,Other mental disorders,DALYs annual % change,0.007976396,,,,57,female,Environmental Heat and Cold Exposure,,,,recovered
+India,2005,Diabetes mellitus,Percent of total DALYs,0.027280332,0.024550171,0.030313995,,71,female,Malaria,,,,death
+India,2009,Diabetes mellitus,DALYs annual % change,0.025267865,,,,77,male,Drug Use Disorders,,,,recovered
+India,2020,Acute glomerulonephritis,Percent of total DALYs,1.02E-05,7.61E-06,1.26E-05,,56,female,Malaria,,,,death
+India,2020,Acute glomerulonephritis,DALYs annual % change,-0.040921901,,,,76,female,Exposure to Forces of Nature,,,,recovered
+India,2008,Chronic kidney disease,Percent of total DALYs,0.0160873,0.014475082,0.017828472,,59,male,Meningitis,,,,death
+India,2007,Chronic kidney disease,DALYs annual % change,0.007896149,,,,84,female,Exposure to Forces of Nature,,,,recovered
+India,2005,Urinary diseases and male infertility,Percent of total DALYs,0.005110184,0.004283043,0.005668937,,52,female,Drowning,,,,recovered
+India,2008,Urinary diseases and male infertility,DALYs annual % change,0.000300869,,,,79,female,Exposure to Forces of Nature,,,,death
+India,2014,Gynecological diseases,Percent of total DALYs,0.011802455,0.00881868,0.015278368,,45,female,Digestive Diseases,,,,death
+India,2017,Gynecological diseases,DALYs annual % change,0.002205227,,,,80,female,Parkinson's Disease,,,,recovered
+India,2010,Hemoglobinopathies and hemolytic anemias,Percent of total DALYs,0.007952809,0.006018769,0.010386524,,58,male,Alcohol Use Disorders,,,,death
+India,2015,Hemoglobinopathies and hemolytic anemias,DALYs annual % change,-0.006894302,,,,80,male,Neonatal Disorders,,,,death
+India,2007,"Endocrine, metabolic, blood, and immune disorders",Percent of total DALYs,0.008587462,0.006515725,0.010988046,,48,male,Cardiovascular Diseases,,,,recovered
+India,2011,"Endocrine, metabolic, blood, and immune disorders",DALYs annual % change,0.004771725,,,,50,male,Self-harm,,,,recovered
+India,2011,Rheumatoid arthritis,Percent of total DALYs,0.001300072,0.001042808,0.00155756,,50,female,Interpersonal Violence,,,,recovered
+India,2008,Rheumatoid arthritis,DALYs annual % change,0.016556658,,,,33,male,Cardiovascular Diseases,,,,recovered
+India,2020,Osteoarthritis,Percent of total DALYs,0.004503216,0.002411794,0.008763146,,66,female,Digestive Diseases,,,,recovered
+India,2022,Osteoarthritis,DALYs annual % change,0.017340646,,,,78,male,Environmental Heat and Cold Exposure,,,,recovered
+India,2010,Low back pain,Percent of total DALYs,0.01599966,0.012100406,0.020251929,,49,male,Exposure to Forces of Nature,,,,death
+India,2007,Low back pain,DALYs annual % change,-0.003121316,,,,48,male,"Fire, Heat, and Hot Substances",,,,recovered
+India,2019,Neck pain,Percent of total DALYs,0.004636495,0.003253695,0.006476427,,53,male,Environmental Heat and Cold Exposure,,,,recovered
+India,2020,Neck pain,DALYs annual % change,0.008566168,,,,37,male,"Fire, Heat, and Hot Substances",,,,death
+India,2008,Gout,Percent of total DALYs,0.00031118,0.000204965,0.000438821,,33,male,Neoplasms,,,,death
+India,2012,Gout,DALYs annual % change,0.014840252,,,,61,male,Cardiovascular Diseases,,,,death
+India,2007,Other musculoskeletal disorders,Percent of total DALYs,0.021241646,0.015551258,0.028415892,,82,female,Poisonings,,,,recovered
+India,2022,Other musculoskeletal disorders,DALYs annual % change,0.017369781,,,,53,female,HIV/AIDS,,,,recovered
+India,2014,Congenital birth defects,Percent of total DALYs,0.016130812,0.012279958,0.021261918,,47,male,Protein-Energy Malnutrition,,,,recovered
+India,2006,Congenital birth defects,DALYs annual % change,-0.033889879,,,,28,female,Cirrhosis and Other Chronic Liver Diseases,,,,recovered
+India,2012,Dermatitis,Percent of total DALYs,0.003359679,0.002099805,0.005068558,,29,male,Interpersonal Violence,,,,recovered
+India,2013,Dermatitis,DALYs annual % change,-0.002319931,,,,49,female,Neonatal Disorders,,,,recovered
+India,2010,Psoriasis,Percent of total DALYs,0.00088268,0.000672888,0.001114941,,30,female,Drowning,,,,recovered
+India,2018,Psoriasis,DALYs annual % change,0.003713534,,,,68,male,Poisonings,,,,death
+India,2017,Scabies,Percent of total DALYs,0.002170837,0.001253334,0.003301221,,61,female,Interpersonal Violence,,,,recovered
+India,2008,Scabies,DALYs annual % change,-0.002714444,,,,38,female,HIV/AIDS,,,,recovered
+India,2006,Fungal skin diseases,Percent of total DALYs,0.001133453,0.000469654,0.002230849,,30,female,Poisonings,,,,death
+India,2007,Fungal skin diseases,DALYs annual % change,-0.002083642,,,,32,male,Cardiovascular Diseases,,,,recovered
+India,2015,Viral skin diseases,Percent of total DALYs,0.001142627,0.00078488,0.00159705,,51,male,Tuberculosis,,,,recovered
+India,2008,Viral skin diseases,DALYs annual % change,-0.005897977,,,,72,male,Parkinson's Disease,,,,recovered
+India,2006,Acne vulgaris,Percent of total DALYs,0.001552099,0.000972749,0.002318752,,37,female,Chronic Respiratory Diseases,,,,recovered
+India,2020,Acne vulgaris,DALYs annual % change,0.006674797,,,,35,male,Tuberculosis,,,,death
+India,2014,Alopecia areata,Percent of total DALYs,0.000190291,0.000131664,0.000260873,,50,female,Neoplasms,,,,recovered
+India,2014,Alopecia areata,DALYs annual % change,0.003936093,,,,31,female,Tuberculosis,,,,recovered
+India,2007,Pruritus,Percent of total DALYs,0.000250733,0.000125928,0.000439886,,82,male,Neoplasms,,,,recovered
+India,2016,Pruritus,DALYs annual % change,0.006700421,,,,55,male,Chronic Respiratory Diseases,,,,recovered
+India,2020,Urticaria,Percent of total DALYs,0.001595113,0.001136769,0.002156204,,28,male,Parkinson's Disease,,,,recovered
+India,2014,Urticaria,DALYs annual % change,-0.004254467,,,,66,male,Tuberculosis,,,,death
+India,2016,Decubitus ulcer,Percent of total DALYs,5.47E-05,2.31E-05,7.31E-05,,39,male,Self-harm,,,,recovered
+India,2014,Decubitus ulcer,DALYs annual % change,0.021593699,,,,27,female,HIV/AIDS,,,,death
+India,2008,Other skin and subcutaneous diseases,Percent of total DALYs,0.001163566,0.000584097,0.002036205,,84,female,Neonatal Disorders,,,,recovered
+India,2008,Other skin and subcutaneous diseases,DALYs annual % change,0.007812881,,,,65,male,Chronic Kidney Disease,,,,death
+India,2010,Age-related and other hearing loss,Percent of total DALYs,0.014635228,0.010848187,0.019295881,,75,male,Maternal Disorders,,,,recovered
+India,2019,Age-related and other hearing loss,DALYs annual % change,0.008971606,,,,52,female,Interpersonal Violence,,,,death
+India,2007,Other sense organ diseases,Percent of total DALYs,0.001119732,0.000695557,0.001637664,,39,male,"Fire, Heat, and Hot Substances",,,,recovered
+India,2006,Other sense organ diseases,DALYs annual % change,0.009154726,,,,69,male,Neonatal Disorders,,,,death
+India,2005,Oral disorders,Percent of total DALYs,0.007477796,0.004326659,0.012033598,,29,female,Maternal Disorders,,,,death
+India,2009,Oral disorders,DALYs annual % change,0.008275261,,,,57,female,HIV/AIDS,,,,recovered
+India,2012,Sudden infant death syndrome,Percent of total DALYs,0.00066844,0.000272309,0.001412805,,31,male,Protein-Energy Malnutrition,,,,recovered
+India,2007,Sudden infant death syndrome,DALYs annual % change,-0.0420048,,,,60,female,Alcohol Use Disorders,,,,recovered
+India,2007,Road injuries,Percent of total DALYs,0.033318563,0.027751624,0.036144785,,33,female,Lower Respiratory Infections,,,,recovered
+India,2017,Road injuries,DALYs annual % change,0.000214317,,,,78,female,Neoplasms,,,,death
+India,2011,Other transport injuries,Percent of total DALYs,0.002707444,0.001997371,0.003115664,,29,male,Protein-Energy Malnutrition,,,,recovered
+India,2008,Other transport injuries,DALYs annual % change,-0.008779541,,,,31,male,"Fire, Heat, and Hot Substances",,,,death
+India,2008,Falls,Percent of total DALYs,0.020865714,0.018592104,0.022616246,,80,male,Interpersonal Violence,,,,death
+India,2009,Falls,DALYs annual % change,0.000667473,,,,49,male,Alcohol Use Disorders,,,,death
+India,2009,Drowning,Percent of total DALYs,0.006586393,0.005660271,0.007708156,,71,female,Chronic Kidney Disease,,,,recovered
+India,2014,Drowning,DALYs annual % change,-0.042244343,,,,30,female,Self-harm,,,,recovered
+India,2017,"Fire, heat, and hot substances",Percent of total DALYs,0.00337142,0.002388704,0.00469002,,30,female,Cardiovascular Diseases,,,,recovered
+India,2005,"Fire, heat, and hot substances",DALYs annual % change,-0.018880013,,,,70,male,Chronic Kidney Disease,,,,recovered
+India,2020,Poisonings,Percent of total DALYs,0.000576523,0.00042494,0.000669991,,35,male,Digestive Diseases,,,,recovered
+India,2018,Poisonings,DALYs annual % change,-0.041851037,,,,58,female,Environmental Heat and Cold Exposure,,,,death
+India,2009,Exposure to mechanical forces,Percent of total DALYs,0.002670569,0.002163751,0.0030887,,36,female,HIV/AIDS,,,,death
+India,2013,Exposure to mechanical forces,DALYs annual % change,-0.018740121,,,,30,male,Cirrhosis and Other Chronic Liver Diseases,,,,recovered
+India,2013,Adverse effects of medical treatment,Percent of total DALYs,0.002184528,0.001633281,0.00263534,,75,female,Lower Respiratory Infections,,,,recovered
+India,2022,Adverse effects of medical treatment,DALYs annual % change,-0.018912506,,,,67,male,Diarrheal Diseases,,,,death
+India,2017,Animal contact,Percent of total DALYs,0.006308701,0.003814366,0.007905822,,29,female,Alcohol Use Disorders,,,,death
+India,2022,Animal contact,DALYs annual % change,-0.028346879,,,,47,female,Protein-Energy Malnutrition,,,,death
+India,2016,Foreign body,Percent of total DALYs,0.001228615,0.001078909,0.001408274,,61,male,Alcohol Use Disorders,,,,death
+India,2017,Foreign body,DALYs annual % change,-0.025280768,,,,70,female,Neonatal Disorders,,,,death
+India,2021,Other unintentional injuries,Percent of total DALYs,0.004078187,0.002416392,0.004727244,,41,female,Cirrhosis and Other Chronic Liver Diseases,,,,recovered
+India,2008,Other unintentional injuries,DALYs annual % change,-0.016778811,,,,65,male,Neonatal Disorders,,,,death
+India,2007,Self-harm,Percent of total DALYs,0.022293638,0.019006045,0.025758274,,29,male,Neoplasms,,,,recovered
+India,2011,Self-harm,DALYs annual % change,-0.011773203,,,,69,female,Acute Hepatitis,,,,recovered
+India,2005,Interpersonal violence,Percent of total DALYs,0.006470533,0.005849796,0.007176725,,84,female,"Fire, Heat, and Hot Substances",,,,recovered
+India,2014,Interpersonal violence,DALYs annual % change,-0.013088261,,,,37,male,Alzheimer's Disease and Other Dementias,,,,recovered
+India,2016,Exposure to forces of nature,Percent of total DALYs,0.000369304,0.000312383,0.000430737,,75,female,Meningitis,,,,recovered
+India,2007,Exposure to forces of nature,DALYs annual % change,-0.009628874,,,,41,female,Environmental Heat and Cold Exposure,,,,death
+India,2020,Environmental heat and cold exposure,Percent of total DALYs,0.001169186,0.000531569,0.001470918,,67,female,Poisonings,,,,recovered
+India,2015,Environmental heat and cold exposure,DALYs annual % change,-0.018617609,,,,46,female,Alcohol Use Disorders,,,,recovered
+India,2008,Ebola,Percent of total DALYs,0,0,0,,68,female,Conflict and Terrorism,,,,death
+India,2005,Ebola,DALYs annual % change,0,,,,75,male,Meningitis,,,,recovered
+India,2018,Executions and police conflict,Percent of total DALYs,2.66E-05,2.39E-05,2.95E-05,,43,female,Environmental Heat and Cold Exposure,,,,recovered
+India,2009,Executions and police conflict,DALYs annual % change,0.016645068,,,,83,male,"Fire, Heat, and Hot Substances",,,,death
+India,2015,Zika virus,Percent of total DALYs,0,0,0,,56,female,Chronic Kidney Disease,,,,death
+India,2008,Zika virus,DALYs annual % change,0,,,,57,female,"Fire, Heat, and Hot Substances",,,,recovered
+India,2019,Guinea worm disease,Percent of total DALYs,0,0,0,,66,female,Cirrhosis and Other Chronic Liver Diseases,,,,recovered
+India,2020,Guinea worm disease,DALYs annual % change,0,,,,68,male,Diabetes Mellitus,,,,recovered
+India,2011,Conflict and terrorism,Percent of total DALYs,0.000303401,0.000221997,0.000426528,,51,male,Neoplasms,,,,death
+India,2019,Conflict and terrorism,DALYs annual % change,-0.064481649,,,,35,male,Self-harm,,,,death
+India,2010,Typhoid and paratyphoid,Percent of total DALYs,0.010186376,0.004946095,0.017533497,,53,male,"Fire, Heat, and Hot Substances",,,,recovered
+India,2015,Typhoid and paratyphoid,DALYs annual % change,-0.04084672,,,,50,male,Malaria,,,,recovered
+India,2008,Invasive Non-typhoidal Salmonella (iNTS),Percent of total DALYs,0.000373138,0.000194677,0.000623298,,35,male,Digestive Diseases,,,,death
+India,2022,Invasive Non-typhoidal Salmonella (iNTS),DALYs annual % change,-0.032175523,,,,43,female,Lower Respiratory Infections,,,,recovered
+India,2012,Headache disorders,Percent of total DALYs,0.017920022,0.002966996,0.037951342,,80,male,Chronic Kidney Disease,,,,death
+India,2012,Headache disorders,DALYs annual % change,0.004430757,,,,73,male,Alzheimer's Disease and Other Dementias,,,,death
+India,2005,Bacterial skin diseases,Percent of total DALYs,0.001360112,0.000820802,0.001619033,,53,male,HIV/AIDS,,,,recovered
+India,2010,Bacterial skin diseases,DALYs annual % change,-0.016579987,,,,47,male,Cardiovascular Diseases,,,,death
+India,2015,Blindness and vision loss,Percent of total DALYs,0.012729427,0.009415736,0.016827923,,84,female,Lower Respiratory Infections,,,,death
+India,2007,Blindness and vision loss,DALYs annual % change,0.004798885,,,,81,male,Digestive Diseases,,,,recovered
+India,2018,Upper digestive system diseases,Percent of total DALYs,0.008197099,0.006668365,0.010222154,,79,male,Cirrhosis and Other Chronic Liver Diseases,,,,recovered
+India,2014,Upper digestive system diseases,DALYs annual % change,-0.016410502,,,,79,female,Cardiovascular Diseases,,,,death
+India,2005,Other malignant neoplasms,Percent of total DALYs,0.004290377,0.003629604,0.004898115,,71,male,Lower Respiratory Infections,,,,death
+India,2015,Other malignant neoplasms,DALYs annual % change,0.00430683,,,,39,female,Diabetes Mellitus,,,,death
+India,2012,Other cardiovascular and circulatory diseases,Percent of total DALYs,0.003000857,0.00254974,0.003571354,,69,female,Protein-Energy Malnutrition,,,,death
+India,2016,Other cardiovascular and circulatory diseases,DALYs annual % change,-0.00045998,,,,59,female,Interpersonal Violence,,,,recovered
+,,,,,,,,,,,,,,
+"Global Burden of Disease Study 2019. Global Burden of Disease Study 2019 (GBD 2019) Results. Seattle, United States: Institute for Health Metrics and Evaluation (IHME), 2020.",,,,,,,,,,,,,,
+Available from http://vizhub.healthdata.org/gbd-compare/,,,,,,,,,,,,,,
+"For terms and conditions of use, please visit http://www.healthdata.org/about/terms-and-conditions",,,,,,,,,,,,,,
