@@ -1,30 +1,131 @@
 *{
-    
-    padding: 0;
-    margin: 0;
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 body{
-    display: flex;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: radial-gradient(circle at 10% 20%, rgb(137, 247, 254) 0%, rgb(102, 166, 255) 90%);
 
 }
-form{
-    margin: auto;
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+.alert-success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.alert-dismissable .close, .alert-dismissible .close {
+    color: inherit;
+}
+.close {
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .2;
+}
+a {
+    text-decoration: none;
+}
+
+a {
+    background-color: transparent;
 }
 .container{
-
- 
     
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    min-height: 710px;
 }
-/* 
-input[type='email'],input[type='password']{
-    border: 1px solid black;
-    height: 50px;
+
+.login-left{
+  background: #ffff;
+  padding: 50px 15px ;
+  border-radius: 10px; 
+}
+.login-header {
+    margin-bottom: 50px;
+  }
+  .login-header h1 {
+    font-size: 40px;
+    
+    text-align: center;
+  }
+  .login-header h2 {
+    text-align: center;
+    opacity: 0.7;
+  }
+  .login-form {
+    width: 400px;
+    
+    
+  }
+  .login-form-content {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    
+  }
+  .login-form-footer {
+    display: flex;
+    gap: 30px;
+    margin-top: 70px;
+  }
+
+input[type='text'],
+input[type='password']{
+    border:1px solid black;
+    height:50px;
     padding: 0 2rem;
-    width: 75%;
+    width:75%;
     outline: none;
+    transition: background .5s;
     font-size: 18px;
     border-radius: 100px;
     margin-bottom: 10px;
+}
+h1,h2{
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-family: 'Caveat', cursive;
+}
+button{
+    width:75%;
+    border:none;
+    background: radial-gradient(circle at 10% 20%, rgb(137, 247, 254) 0%, rgb(102, 166, 255) 90%);
+    color: white;
+    padding: 1rem;
+    border-radius: 100px;
+    margin-left: 50px;
+    text-transform:uppercase;
+    font-size: 18px;
+    height: 50px;
+    cursor:pointer;
+}
+.btn:hover{
+  opacity: .7;
 
-} */
+}
+.signup-form-footer{
+    text-align: center;
+    align-items: center;
+    line-height: 3.5;
+    justify-content: center;
+    text-decoration: none;
+}

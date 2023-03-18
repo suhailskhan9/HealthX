@@ -1,49 +1,17 @@
-
-body {
-    background: radial-gradient(circle at 12.3% 19.3%, rgb(85, 88, 218) 0%, rgb(95, 209, 249) 100.2%);
-}
-
-nav{
-    border-radius: 10px;
-}
-    
-  .navbar-brand{
-    font-family: "Ubuntu";
-    font-size: 40px;
-    font-weight: 800;
-    color: #f8f9fa;
+body{
+    background:radial-gradient(circle at 10% 20%, rgb(137, 247, 254) 0%, rgb(102, 166, 255) 90%);
     
 }
-.navbar-light .navbar-nav .nav-link {
-    color: #f8f9fa;
 
-
-}
-#HealthX
-{
-    color: #fae1ef;
-}
-.container-fluid{
-max-width: 80vw;
-}
-.nav-link{
-    font-family: "Ubuntu";
-    font-size: 18px;
-    font-weight: 600;
-   
-    color: #fae1ef;
-    
-}
-.nav-link:hover{
-    color: #191e2f; 
+.navbar-brand{
+    font-family: 'Caveat', cursive;
+    font-size: 64px;
 }
 
-
-.mx-auto{
-    margin-left: auto;
-    margin-right: auto;
+#healthx{
+    font-family: 'Caveat', cursive;
 }
 
-.min-h-screen{
-    min-height: 100vh;
+a .nav-link{
+    font-size: 32px;
 }
