@@ -3,27 +3,23 @@ from flask import Flask, render_template, request, redirect
 import sqlite3
 import smtplib
 import os
-from datetime import datetime, timedelta
-
+from datetime import datetime, timedelta, date
+import threading
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route("/")
 def home():
     return render_template("index.html")
-
-
-
 
 def send_email(to_email):
     
     smtp_server = "smtp.gmail.com" 
     smtp_port = 587 
     smtp_username = "suhailskhan99@gmail.com" 
-    smtp_password = "uaguyxagndgunwku" 
-
+    smtp_password = "uaguyxagndgunwku"
    
     message = MIMEMultipart()
     message['From'] = smtp_username
@@ -48,8 +44,9 @@ def send_email(to_email):
 
 email = None
 
-@app.route('/add', methods=['POST'])
+@app.route("/add/", methods=['POST'])
 def add():
+    print("In add")
     global email
     email = request.form['email']
     dose = request.form['dose']
@@ -63,16 +60,19 @@ def add():
               (email, dose, frequency, start_date, end_date,time))
     conn.commit()
     conn.close()
-    return redirect('/')
+    t1 = threading.Thread(target=reminder)
+    t1.start()
+    return redirect("/medications/")
 
-@app.route('/medications')
+@app.route("/medications/")
 def medications():
-    conn = sqlite3.connect('medications.db')
-    c = conn.cursor()
-    c.execute('SELECT * FROM medications')
-    meds = c.fetchall()
-    conn.close()
-    return render_template('medications.html', meds=meds)
+    print("hello world")
+    # conn = sqlite3.connect('medications.db')
+    # c = conn.cursor()
+    # c.execute('SELECT * FROM medications')
+    # meds = c.fetchall()
+    # conn.close()
+    return render_template("medications.html")
 
 @app.route('/delete/<int:id>')
 def delete(id):
@@ -83,40 +83,65 @@ def delete(id):
     conn.close()
     return redirect('/medications')
 
-@app.route('/reminder')
 def reminder():
-    now = datetime.now()
-    print("Now:",now)
-    conn = sqlite3.connect('medications.db')
-    c = conn.cursor()
-    c.execute('SELECT * FROM medications')
-    meds = c.fetchall()
-    reminders = []
-    for med in meds:
-        start_date = datetime.strptime(str(med[4]), '%Y-%m-%d %H:%M:%S')
-        end_date = datetime.strptime(str(med[5]), '%Y-%m-%d %H:%M:%S')
-        print(start_date)
-        print(type(start_date))
+    while(True):
+        conn = sqlite3.connect('medications.db')
+        c = conn.cursor()
+        c.execute('SELECT * FROM medications')
+        meds = c.fetchall()
         
-        
-        # print(type(end_date_strip))
-        if start_date <= now <= end_date:
-            days_since_start = (now - start_date).days
-            start_date_strip = str(datetime.strptime(str(med[4]), '%Y-%m-%d %H:%M:%S'))
-            print(start_date)
+        for i in meds:
+            email=i[1]
+            end_date= datetime.strptime(str(i[4]), '%Y-%m-%d %H:%M:%S')
+            end_date=end_date.date()
+            start_date = datetime.strptime(str(i[5]), '%Y-%m-%d %H:%M:%S')
+            start_date=start_date.date()
+            time = datetime.strptime(i[6], '%H:%M').time()
+            print(date.today(),end_date)
+            print(type(date.today()),type(end_date))
+            if date.today()==end_date:
+                now=datetime.now()
+                print(now,now.hour,now.minute)
+                if now.hour==time.hour and now.minute==time.minute:
+                    c.execute('delete from medications where id=?',(i[0],))
+                    conn.commit()
+                    conn.close()
+                    print("printing email")
+                    send_email(email)
+                    break
+
+
+# def reminder():
+#     now = datetime.now()
+#     print("Now:",now)
+#     conn = sqlite3.connect('medications.db')
+#     c = conn.cursor()
+#     c.execute('SELECT * FROM medications')
+#     meds = c.fetchall()
+#     reminders = []
+#     for med in meds:
+#         start_date = datetime.strptime(str(med[4]), '%Y-%m-%d %H:%M:%S')
+#         end_date = datetime.strptime(str(med[5]), '%Y-%m-%d %H:%M:%S')
+#         print(start_date)
+#         print(type(start_date))
+#         # print(type(end_date_strip))
+#         if start_date <= now <= end_date:
+#             days_since_start = (now - start_date).days
+#             start_date_strip = str(datetime.strptime(str(med[4]), '%Y-%m-%d %H:%M:%S'))
+#             print(start_date)
             
-            start_date_strip = start_date_strip.replace('-','')
-            start_date_strip = start_date_strip.replace(' ','')
-            start_date_strip = start_date_strip.replace(':','')
-            print(start_date_strip)
+#             start_date_strip = start_date_strip.replace('-','')
+#             start_date_strip = start_date_strip.replace(' ','')
+#             start_date_strip = start_date_strip.replace(':','')
+#             print(start_date_strip)
             
-            if days_since_start % int(start_date_strip) == 0:
-                time_due = start_date + timedelta(days=days_since_start, hours=med[3])
-                reminder = (med[1], med[2], time_due)
-                send_email(email)
-                reminders.append(reminder)
-    conn.close()
-    return render_template('reminder.html', reminders=reminders)
+#             if days_since_start % int(start_date_strip) == 0:
+#                 time_due = start_date + timedelta(days=days_since_start, hours=med[3])
+#                 reminder = (med[1], med[2], time_due)
+#                 send_email(email)
+#                 reminders.append(reminder)
+#     conn.close()
+#     return render_template('reminder.html', reminders=reminders)
 
 
 
