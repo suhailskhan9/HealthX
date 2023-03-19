@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Visualization</title>
-    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
-    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
-    <link rel="stylesheet" href="/static/dv.css">
-    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <!-- <link rel="" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script> -->
+    <link rel="stystylesheetlesheet" href="/static/dv.css">
+    <!-- <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"> -->
 </head>
 <body>
     <!-- <button onclick="location.href='/admin_login/'" type="button" class="btn">Admin</button>
@@ -22,10 +24,28 @@
             <button onclick="location.href='/dv4h'" type="button" class="btn">Year Vs Recovered</button>
             <button onclick="location.href='/dv5h'" type="button" class="btn">Age Disease Vs Age</button>
         <div class="container" style="margin-left: 20%">
-                <img src="{{ url_for('dv1') }}">
-    </div>
-          
+                <!-- <img src="{{ url_for('dv1') }}"> -->
+                <img id="image" src="static/myfig.png" alt="GFG image" />
         </div>
+ 
+    <!-- <button type="button"
+        onclick="show()" id="btnID">
+        Show Image
+    </button> -->
+ 
+    <!-- <script>
+        function show() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('image')
+                    .style.display = "block";
+ 
+            document.getElementById('btnID')
+                    .style.display = "none";
+        }
+    </script> -->
+    </div>
     
 </body>
 </html>

@@ -9,6 +9,8 @@ import numpy as np
 fig,ax=plt.subplots(figsize=(15,6))
 ax=sns.set_style(style="darkgrid")
 df=pd.read_csv("download.csv")
+# Catagory=pd.cut(df.Age1,bins=[26,60,90],labels=["Adult","Old"])
+# df.insert(9,"Age group",Catagory)
 app=Flask(__name__)
 
 @app.route('/')
@@ -34,16 +36,47 @@ def dv5h():
 
 @app.route('/dv1')
 def dv1():
-    sns.countplot(data=df,y='disease',hue='Gender')
+    # sns.countplot(data=df,y='disease',hue='Gender')
+    # canvas=FigureCanvas(fig)
+    # img=io.BytesIO()
+    # fig.savefig(img)
+    # img.seek(0)
+    # img="venv/myfig.png"
+    return send_file(img,mimetype='img/png')
+
+@app.route('/dv2')
+def dv2():
+    sns.countplot(data=df,y=df['Year'],hue='status')
     canvas=FigureCanvas(fig)
     img=io.BytesIO()
     fig.savefig(img)
     img.seek(0)
     return send_file(img,mimetype='img/png')
 
-@app.route('/dv2')
-def dv2():
-    sns.countplot(data=df,y=df['Year'].where(df['status'])=='death',hue='Gender')
+@app.route('/dv3')
+def dv3():
+    sns.countplot(data=df,y=df['Year'].where(df['status']=="recovered"),hue="Gender")
+    # ax.set(xlabel='common xlabel', ylabel='common ylabel')
+    canvas=FigureCanvas(fig)
+    img=io.BytesIO()
+    fig.savefig(img)
+    img.seek(0)
+    return send_file(img,mimetype='img/png')
+
+@app.route('/dv4')
+def dv4():
+    sns.countplot(data=df,y='status',hue='Age group')
+    # ax.set(xlabel='common xlabel', ylabel='common ylabel')
+    canvas=FigureCanvas(fig)
+    img=io.BytesIO()
+    fig.savefig(img)
+    img.seek(0)
+    return send_file(img,mimetype='img/png')
+
+@app.route('/dv5')
+def dv5():
+    sns.countplot(data=df,y=df['disease'],hue=df['Age group'])
+    # ax.set(xlabel='common xlabel', ylabel='common ylabel')
     canvas=FigureCanvas(fig)
     img=io.BytesIO()
     fig.savefig(img)

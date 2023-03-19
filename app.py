@@ -136,6 +136,5 @@ def reminder():
 #     return render_template('reminder.html', reminders=reminders)
 
 
-
 if __name__ == '__main__':
     app.run(debug=True)

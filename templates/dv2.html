@@ -7,13 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    <button onclick="location.href='/dv1h'" type="button" class="btn">Disease Vs Death</button>
+    <button onclick="location.href='/dv1h'" type="button" class="btn">Disease vs Count</button>
     <button onclick="location.href='/dv2h'" type="button" class="btn">Disease Vs Death</button>
     <button onclick="location.href='/dv3h'" type="button" class="btn">Year Vs Death</button>
     <button onclick="location.href='/dv4h'" type="button" class="btn">Year Vs Recovered</button>
     <button onclick="location.href='/dv5h'" type="button" class="btn">Age Disease Vs Age</button>
     <div class="container" style="margin-left: 20%">
-        <img src="{{ url_for('dv2') }}">
+        <img id="image" src="static\save_as_a_png.png" alt="GFG image" />
     </div>
 </body>
 </html>
