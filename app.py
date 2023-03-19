@@ -98,9 +98,10 @@ def index():
 @app.route("/login/")
 def login():
     return render_template("login.html")
-
+email=None
 @app.route("/loginCheck/",methods=["POST"])
 def loginCheck():
+    global email
     email=request.form["email"]
     password=request.form["password"]
     database_connection=sqlite3.connect("medications.db")
@@ -256,16 +257,15 @@ email = None
 def add():
     print("In add")
     global email
-    email = request.form['email']
     dose = request.form['dose']
-    frequency = request.form['frequency']
+    # frequency = request.form['frequency']
     start_date = datetime.strptime(str(request.form['start_date']), '%Y-%m-%d')
     end_date = datetime.strptime(str(request.form['end_date']), '%Y-%m-%d')
     time = request.form['time']
     conn = sqlite3.connect('medications.db')
     c = conn.cursor()
-    c.execute('INSERT INTO medications (email, dose, frequency, start_date, end_date,time) VALUES (?, ?, ?, ?, ?,?)',
-              (email, dose, frequency, start_date, end_date,time))
+    c.execute('INSERT INTO medications (email, dose, start_date, end_date,time) VALUES (?, ?, ?, ?,?)',
+              (email, dose, start_date, end_date,time))
     conn.commit()
     conn.close()
     t1 = threading.Thread(target=reminder)
