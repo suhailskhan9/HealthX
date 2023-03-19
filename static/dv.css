@@ -1,4 +1,4 @@
-*{
+/* *{
     padding: 0;
     margin:0;
     box-sizing: border-box;
@@ -69,4 +69,11 @@ body {
     padding: 50px;
     border-radius: 15px;
     margin-right: 60px;
-}
+} */
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
