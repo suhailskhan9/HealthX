@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/static/register.css">
+</head>
+<header>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+   {% for category, message in messages %}
+   {% if category== 'error' %}
+   <div class="alert alert-danger alert-dismissible">
+     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+     <span>{{ message }}</span>
+   </div>
+   {% else %}
+   <div class="alert alert-success alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <span>{{ message }}</span>
+  </div>
+  {% endif %}
+   {% endfor %}
+   {% endif %}
+   {% endwith %}
+</header>
+<body>
+    <div class="container">
+        <div class="login-left">
+            <div class="login-header">
+                <h1>Sign Up</h1>
+            </div>
+            <form class="login-form" action="/reg" method="post" >
+                <div class="login-form-content">
+                    
+                    <div class="form-item">
+                        <label for="name">Name</label>
+                        <br>
+                        <input type="text" placeholder="Enter Name" name="name" id="name"  required>
+                    </div>
+                    <div class="form-item">
+                        <label for="email">Email</label>
+                        <br>
+                        <input type="text" placeholder="Enter Email" name="email" id="email" required>
+                    </div>
+                    <div class="form-item">
+                        <label for="password">Password</label>
+                        <br>
+                        <input type="password" placeholder="Enter Password" name="password" id="password" required>
+                        <br>
+                    </div>
+                    <br>
+                    <button type="signup"  class="btn">Sign Up</button>
+                </div>
+                <div class="signup-form-footer">
+                    <a href="/">Already have an account? Sign In</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

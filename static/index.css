@@ -12,6 +12,7 @@ body{
     font-family: 'Caveat', cursive;
 }
 
-a .nav-link{
+.nav-link{
     font-size: 32px;
+    margin-right: 10px;
 }
