@@ -9,25 +9,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Ubuntu&display=swap" rel="stylesheet">   
      <script src="https://kit.fontawesome.com/6f736b4fbb.js" crossorigin="anonymous" ></script>
      <!-- css -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/static/home.css" />
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 </head>
+<header>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+ {% for category, message in messages %}
+ {% if category== 'error' %}
+ <div class="alert alert-danger alert-dismissible">
+   <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+   <span>{{ message }}</span>
+ </div>
+ {% else %}
+ <div class="alert alert-success alert-dismissible">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <span>{{ message }}</span>
+</div>
+{% endif %}
+ {% endfor %}
+ {% endif %}
+ {% endwith %}
+</header>
 <body>
-    <!-- <nav class="navbar bg-dark" data-bs-theme="dark">
-        <div
-          class="container-fluid"
-          style="padding-left: 100px; padding-right: 100px"
-        >
-          <a class="navbar-brand" id="HealthX" href="#">Profile</a> 
-            <a class="nav-link" id="nl" href="predictor_1.html">Disease predictor</a>
-            <a class="nav-link" href="dv.html">Medication Analysis</a>
-            <a class="nav-link" href="SignIn.html">Reminder</a>     
-        </div>
-      </nav> -->
-
-
       <div class="sidebar"> 
-  
         <div class="sidebar-head">
         <h1><span>HealthX</span></h1>
         </div>
@@ -35,15 +42,15 @@
         <div class="sidebar-menu">
           <ul>
             <li>
-              <a href="/home" class="btn active"><span class="las la-user-circle"></span>
+              <a href="/home/" class="btn active"><span class="las la-user-circle"></span>
                 <span>Profile</span></a>
             </li>
             <li>
-              <a href="" class="btn"><span class="las la-chart-line"></span>
+              <a href="/predict/" class="btn"><span class="las la-chart-line"></span>
                 <span>Disease Predictor</span></a>
             </li>
             <li>
-              <a href="" class="btn"><span class="las la-chart-bar"></span>
+              <a href='/visualize' class="btn"><span class="las la-chart-bar"></span>
                 <span>Disease Analysis</span></a>
             </li>
             <li>
@@ -51,7 +58,7 @@
                 <span>Medication Reminder</span></a>
             </li>
             <li>
-              <a href="" class="btn"><span class="las la-sign-out-alt"></span>
+              <a href="/" class="btn"><span class="las la-sign-out-alt"></span>
                 <span>Logout</span></a>
             </li>
           </ul>
@@ -61,8 +68,19 @@
         </div>
 
         <div class="main-content">
-            
-          
-        </div>
+          <div class="page_title">Profile</div>
+          <span><h3>User</h3></span>
+              <img src="/static/profile.jpeg" class="img">
+              <div class="titles">
+              <span><h3>Name</h3></span>
+              <label>{{userdata[0][0]}}</label>
+              <br><br>
+              <span><h3>E-mail</h3></span>
+              <label>{{userdata[0][1]}}</label>
+              <br><br>
+              <span><h3>Password</h3></span>
+              <label>{{userdata[0][2]}}</label>
+  
+      </div>
 </body>
 </html>
