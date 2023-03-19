@@ -76,10 +76,7 @@ form{
     font-size: 24px;
    margin-top: 25px;
     display: flex;
-    
     flex-direction: column;
-   
- 
 }
 
 input[type='email'],input[type='text'],input[type='date'],input[type='time']{
@@ -103,17 +100,12 @@ input[type='email'],input[type='text'],input[type='date'],input[type='time']{
     transition: background .5s;
     font-size: 18px;
     border-radius: 100px;
-   
     background: radial-gradient(circle at 10% 20%, rgb(137, 247, 254) 0%, rgb(102, 166, 255) 90%);
     color: white;
     border: none;
-    
     text-transform:uppercase;
-  
-    
     cursor:pointer;
 }
 .add-btn:hover{
   opacity: .7;
-
 }
