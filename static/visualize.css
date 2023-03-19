@@ -67,7 +67,31 @@ body {
     min-height: 655px;
     min-width: 500px;
     padding: 50px;
+    padding-left: 380px;
     border-radius: 15px;
     margin-right: 60px;
 }
+.btnn{
+    height:45px;
+    padding: 0 2rem;
+    width:40%;
+    outline: none;
+    transition: background .5s;
+    font-size: 18px;
+    border-radius: 100px;
+    background: radial-gradient(circle at 10% 20%, rgb(137, 247, 254) 0%, rgb(102, 166, 255) 90%);
+    color: darkblue;
+    border: none;
+    text-transform:uppercase;
+    cursor:pointer;
+    margin-top: 50px;
 
+}
+
+.btnn:hover{
+    opacity: .7;
+}
+
+.main-content H1{
+    padding-left: 82px;
+}
