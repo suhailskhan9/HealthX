@@ -165,7 +165,7 @@ def predict():
     return render_template("predictor_1.html",l1=l1)
 @app.route("/symget/",methods=["POST"])
 def getsym():
-    s1 = request.form.get("sym1")
+    s1 =request.form.get("sym1")
     s2=request.form.get("sym2")
     s3=request.form.get("sym3")
     s4=request.form.get("sym4")
@@ -187,7 +187,7 @@ def getsym():
     inputtest = [l2]
     predict = gnb.predict(inputtest)
     predicted=predict[0]
-
+    
     h='no'
     for a in range(0,len(disease)):
         if(disease[predicted] == disease[a]):
@@ -270,6 +270,7 @@ def add():
     conn.close()
     t1 = threading.Thread(target=reminder)
     t1.start()
+    flash("Reminder set successfully!",category='success')
     return redirect("/medications/")
 
 @app.route("/medications/")
@@ -288,12 +289,12 @@ def reminder():
             email=i[1]
             end_date= datetime.strptime(str(i[4]), '%Y-%m-%d %H:%M:%S')
             end_date=end_date.date()
-            start_date = datetime.strptime(str(i[5]), '%Y-%m-%d %H:%M:%S')
+            start_date = datetime.strptime(str(i[3]), '%Y-%m-%d %H:%M:%S')
             start_date=start_date.date()
-            time = datetime.strptime(i[6], '%H:%M').time()
+            time = datetime.strptime(i[5], '%H:%M').time()
             print(date.today(),end_date)
             print(type(date.today()),type(end_date))
-            if date.today()==end_date:
+            if date.today()==start_date:
                 now=datetime.now()
                 print(now,now.hour,now.minute)
                 if now.hour==time.hour and now.minute==time.minute:

@@ -6,8 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/medications.css">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Medication Reminder</title>
 </head>
+<header>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+ {% for category, message in messages %}
+ {% if category== 'error' %}
+ <div class="alert alert-danger alert-dismissible">
+   <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+   <span>{{ message }}</span>
+ </div>
+ {% else %}
+ <div class="alert alert-success alert-dismissible">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <span>{{ message }}</span>
+</div>
+{% endif %}
+ {% endfor %}
+ {% endif %}
+ {% endwith %}
+</header>
 <body>
   <div class="sidebar"> 
   
