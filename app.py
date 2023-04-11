@@ -8,7 +8,7 @@ import base64
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 import matplotlib.pyplot as plt
 import numpy as np
-import seaborn as sns
+# import seaborn as sns
 import pandas as pd
 from datetime import datetime, timedelta, date
 import threading
@@ -43,54 +43,6 @@ l1=['itching','skin_rash','nodal_skin_eruptions','continuous_sneezing','shiverin
     'receiving_blood_transfusion','receiving_unsterile_injections','coma','stomach_bleeding','distention_of_abdomen','history_of_alcohol_consumption',
     'fluid_overload','blood_in_sputum','prominent_veins_on_calf','palpitations','painful_walking','pus_filled_pimples','blackheads','scurring','skin_peeling',
     'silver_like_dusting','small_dents_in_nails','inflammatory_nails','blister','red_sore_around_nose','yellow_crust_ooze']
-
-disease=['Fungal infection','Allergy','GERD','Chronic cholestasis','Drug Reaction',
-        'Peptic ulcer diseae','AIDS','Diabetes','Gastroenteritis','Bronchial Asthma','Hypertension',
-        ' Migraine','Cervical spondylosis',
-        'Paralysis (brain hemorrhage)','Jaundice','Malaria','Chicken pox','Dengue','Typhoid','hepatitis A',
-'Hepatitis B','Hepatitis C','Hepatitis D','Hepatitis E','Alcoholic hepatitis','Tuberculosis',
-'Common Cold','Pneumonia','Dimorphic hemmorhoids(piles)',
-'Heartattack','Varicoseveins','Hypothyroidism','Hyperthyroidism','Hypoglycemia','Osteoarthristis',
-'Arthritis','(vertigo) Paroymsal  Positional Vertigo','Acne','Urinary tract infection','Psoriasis',
-'Impetigo']
-
-l2=[]
-for x in range(0,len(l1)):
-    l2.append(0)
-
-# TESTING DATA
-tr=pd.read_csv("Testing.csv")
-tr.replace({'prognosis':{'Fungal infection':0,'Allergy':1,'GERD':2,'Chronic cholestasis':3,'Drug Reaction':4,
-'Peptic ulcer diseae':5,'AIDS':6,'Diabetes ':7,'Gastroenteritis':8,'Bronchial Asthma':9,'Hypertension ':10,
-'Migraine':11,'Cervical spondylosis':12,
-'Paralysis (brain hemorrhage)':13,'Jaundice':14,'Malaria':15,'Chicken pox':16,'Dengue':17,'Typhoid':18,'hepatitis A':19,
-'Hepatitis B':20,'Hepatitis C':21,'Hepatitis D':22,'Hepatitis E':23,'Alcoholic hepatitis':24,'Tuberculosis':25,
-'Common Cold':26,'Pneumonia':27,'Dimorphic hemmorhoids(piles)':28,'Heart attack':29,'Varicose veins':30,'Hypothyroidism':31,
-'Hyperthyroidism':32,'Hypoglycemia':33,'Osteoarthristis':34,'Arthritis':35,
-'(vertigo) Paroymsal  Positional Vertigo':36,'Acne':37,'Urinary tract infection':38,'Psoriasis':39,
-'Impetigo':40}},inplace=True)
-
-X_test= tr[l1]
-y_test = tr[["prognosis"]]
-np.ravel(y_test)
-
-# TRAINING DATA
-df=pd.read_csv("Training.csv")
-
-df.replace({'prognosis':{'Fungal infection':0,'Allergy':1,'GERD':2,'Chronic cholestasis':3,'Drug Reaction':4,
-'Peptic ulcer diseae':5,'AIDS':6,'Diabetes ':7,'Gastroenteritis':8,'Bronchial Asthma':9,'Hypertension ':10,
-'Migraine':11,'Cervical spondylosis':12,
-'Paralysis (brain hemorrhage)':13,'Jaundice':14,'Malaria':15,'Chicken pox':16,'Dengue':17,'Typhoid':18,'hepatitis A':19,
-'Hepatitis B':20,'Hepatitis C':21,'Hepatitis D':22,'Hepatitis E':23,'Alcoholic hepatitis':24,'Tuberculosis':25,
-'Common Cold':26,'Pneumonia':27,'Dimorphic hemmorhoids(piles)':28,'Heart attack':29,'Varicose veins':30,'Hypothyroidism':31,
-'Hyperthyroidism':32,'Hypoglycemia':33,'Osteoarthristis':34,'Arthritis':35,
-'(vertigo) Paroymsal  Positional Vertigo':36,'Acne':37,'Urinary tract infection':38,'Psoriasis':39,
-'Impetigo':40}},inplace=True)
-
-X= df[l1]
-
-y = df[["prognosis"]]
-np.ravel(y)
 @app.route("/")
 def index():
     return render_template("index.html")
@@ -165,6 +117,57 @@ def predict():
     return render_template("predictor_1.html",l1=l1)
 @app.route("/symget/",methods=["POST"])
 def getsym():
+    global l1
+    disease=['Fungal infection','Allergy','GERD','Chronic cholestasis','Drug Reaction',
+        'Peptic ulcer diseae','AIDS','Diabetes','Gastroenteritis','Bronchial Asthma','Hypertension',
+        ' Migraine','Cervical spondylosis',
+        'Paralysis (brain hemorrhage)','Jaundice','Malaria','Chicken pox','Dengue','Typhoid','hepatitis A',
+   'Hepatitis B','Hepatitis C','Hepatitis D','Hepatitis E','Alcoholic hepatitis','Tuberculosis',
+   'Common Cold','Pneumonia','Dimorphic hemmorhoids(piles)',
+   'Heartattack','Varicoseveins','Hypothyroidism','Hyperthyroidism','Hypoglycemia','Osteoarthristis',
+   'Arthritis','(vertigo) Paroymsal  Positional Vertigo','Acne','Urinary tract infection','Psoriasis',
+   'Impetigo']
+    
+    l2=[]
+    for x in range(0,len(l1)):
+       l2.append(0)
+
+# TESTING DATA
+    tr=pd.read_csv("Testing.csv")
+    tr.replace({'prognosis':{'Fungal infection':0,'Allergy':1,'GERD':2,'Chronic cholestasis':3,'Drug Reaction':4,
+   'Peptic ulcer diseae':5,'AIDS':6,'Diabetes ':7,'Gastroenteritis':8,'Bronchial Asthma':9,'Hypertension ':10,
+   'Migraine':11,'Cervical spondylosis':12,
+   'Paralysis (brain hemorrhage)':13,'Jaundice':14,'Malaria':15,'Chicken pox':16,'Dengue':17,'Typhoid':18,'hepatitis A':19,
+   'Hepatitis B':20,'Hepatitis C':21,'Hepatitis D':22,'Hepatitis E':23,'Alcoholic hepatitis':24,'Tuberculosis':25,
+   'Common Cold':26,'Pneumonia':27,'Dimorphic hemmorhoids(piles)':28,'Heart attack':29,'Varicose veins':30,'Hypothyroidism':31,
+   'Hyperthyroidism':32,'Hypoglycemia':33,'Osteoarthristis':34,'Arthritis':35,
+   '(vertigo) Paroymsal  Positional Vertigo':36,'Acne':37,'Urinary tract infection':38,'Psoriasis':39,
+   'Impetigo':40}},inplace=True)
+
+    X_test= tr[l1]
+    y_test = tr[["prognosis"]]
+    np.ravel(y_test)
+
+    # TRAINING DATA
+    df=pd.read_csv("Training.csv")
+
+    df.replace({'prognosis':{'Fungal infection':0,'Allergy':1,'GERD':2,'Chronic cholestasis':3,'Drug Reaction':4,
+    'Peptic ulcer diseae':5,'AIDS':6,'Diabetes ':7,'Gastroenteritis':8,'Bronchial Asthma':9,'Hypertension ':10,
+    'Migraine':11,'Cervical spondylosis':12,
+    'Paralysis (brain hemorrhage)':13,'Jaundice':14,'Malaria':15,'Chicken pox':16,'Dengue':17,'Typhoid':18,'hepatitis A':19,
+    'Hepatitis B':20,'Hepatitis C':21,'Hepatitis D':22,'Hepatitis E':23,'Alcoholic hepatitis':24,'Tuberculosis':25,
+    'Common Cold':26,'Pneumonia':27,'Dimorphic hemmorhoids(piles)':28,'Heart attack':29,'Varicose veins':30,'Hypothyroidism':31,
+    'Hyperthyroidism':32,'Hypoglycemia':33,'Osteoarthristis':34,'Arthritis':35,
+    '(vertigo) Paroymsal  Positional Vertigo':36,'Acne':37,'Urinary tract infection':38,'Psoriasis':39,
+    'Impetigo':40}},inplace=True)
+
+    X= df[l1]
+
+    y = df[["prognosis"]]
+    np.ravel(y)
+
+
+
     s1 =request.form.get("sym1")
     s2=request.form.get("sym2")
     s3=request.form.get("sym3")
@@ -295,6 +298,8 @@ def reminder():
             print(date.today(),end_date)
             print(type(date.today()),type(end_date))
             if date.today()==start_date:
+
+
                 now=datetime.now()
                 print(now,now.hour,now.minute)
                 if now.hour==time.hour and now.minute==time.minute:
