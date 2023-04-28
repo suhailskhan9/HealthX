@@ -16,6 +16,8 @@ import threading
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from sklearn.naive_bayes import MultinomialNB
+import time
+from plyer import notification
 
 app = Flask(__name__)
 app.secret_key='secretkey'
@@ -337,6 +339,10 @@ def reminder():
                 if now.hour==time.hour and now.minute==time.minute:
                     print("printing email")
                     send_email(email,med_name=i[2])
+                    notification.notify(
+                        title = "Reminder",
+                        message = "It's time to take your medicine ",
+                        timeout=20)
                     tomorrow = date.today() + timedelta(1)
                     tomorrow = datetime.combine(tomorrow,datetime.min.time())
                     conn = sqlite3.connect('medications.db')
