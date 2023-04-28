@@ -261,7 +261,7 @@ def dis_rem():
 #     some_data=database_cursor.fetchall()
 #     return render_template('dis_rem.html')
 
-def send_email(to_email):
+def send_email(to_email,med_name):
     
     smtp_server = "smtp.gmail.com" 
     smtp_port = 587 
@@ -273,8 +273,7 @@ def send_email(to_email):
     message['To'] = to_email
     message['Subject'] = "Medication Reminder"
 
-   
-    message_body = f"Reminder: It's time to take your medicine)."
+    message_body = f"Reminder: It's time to take your medicine : [{med_name}]"
     # message_body = f"Reminder: It's time to take {med_name} ({med_dose})."
 
     message.attach(MIMEText(message_body, 'plain'))
@@ -337,7 +336,7 @@ def reminder():
                 print(now,now.hour,now.minute)
                 if now.hour==time.hour and now.minute==time.minute:
                     print("printing email")
-                    send_email(email)
+                    send_email(email,med_name=i[2])
                     tomorrow = date.today() + timedelta(1)
                     tomorrow = datetime.combine(tomorrow,datetime.min.time())
                     conn = sqlite3.connect('medications.db')

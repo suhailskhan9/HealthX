@@ -93,5 +93,6 @@ body {
 }
 
 .main-content H1{
-    padding-left: 82px;
+    padding-left: 15%;
+    font-style: italic;
 }

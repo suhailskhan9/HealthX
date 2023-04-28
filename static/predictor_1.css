@@ -112,3 +112,15 @@ select{
 } */
 
 
+.main-content h1 {
+  
+    padding-bottom: 4%;
+    font-style: italic;
+    padding-left: 5%;
+}
+
+.main-content h2 {
+
+    font-style: italic;
+    padding-left: 8%;
+}

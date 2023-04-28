@@ -116,3 +116,8 @@ body {
     border-radius: 15px;
     margin-right: 60px;
 }
+.main-content h1 {
+    padding-left: 445px;
+    padding-bottom: inherit;
+    font-style: italic;
+}

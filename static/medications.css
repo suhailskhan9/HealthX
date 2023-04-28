@@ -137,3 +137,10 @@ input[type='email'],input[type='text'],input[type='date'],input[type='time']{
 .add-btn:hover{
   opacity: .7;
 }
+
+.main-content h1 {
+  
+    padding-bottom: 5%;
+    font-style: italic;
+  
+}
