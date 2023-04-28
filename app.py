@@ -244,6 +244,22 @@ def dv4h():
 @app.route('/dv5h')
 def dv5h():
     return render_template('dv5.html')
+@app.route("/dis_rem/")
+def dis_rem():
+    global email
+    database_connection = sqlite3.connect("medications.db")
+    database_cursor = database_connection.cursor()
+    database_cursor.execute("select dose,start_date,end_date,time from medications where email=?",(email,))
+    some_data=database_cursor.fetchall()
+    return render_template('dis_rem.html',some_data=some_data)
+
+# @app.route("/rem_d/",methods=['POST'])
+# def rem_d():
+#     database_connection = sqlite3.connect("medications.db")
+#     database_cursor = database_connection.cursor()
+#     database_cursor.execute("select dose,start_date,end_date,time where email=?",(email,))
+#     some_data=database_cursor.fetchall()
+#     return render_template('dis_rem.html')
 
 def send_email(to_email):
     
@@ -273,7 +289,6 @@ def send_email(to_email):
         print(smtp_username,smtp_password)
 
 email = None
-
 @app.route("/add/", methods=['POST'])
 def add():
     print("In add")
@@ -289,6 +304,7 @@ def add():
               (email, dose, start_date, end_date,time))
     conn.commit()
     conn.close()
+
     t1 = threading.Thread(target=reminder)
     t1.start()
     flash("Reminder set successfully!",category='success')
@@ -305,7 +321,8 @@ def reminder():
         c = conn.cursor()
         c.execute('SELECT * FROM medications')
         meds = c.fetchall()
-        
+        conn.commit()
+        conn.close()
         for i in meds:
             email=i[1]
             end_date= datetime.strptime(str(i[4]), '%Y-%m-%d %H:%M:%S')
@@ -315,20 +332,27 @@ def reminder():
             time = datetime.strptime(i[5], '%H:%M').time()
             print(date.today(),end_date)
             print(type(date.today()),type(end_date))
-            if date.today()==start_date:
-
-
+            if date.today()>=start_date and date.today()<=end_date:
                 now=datetime.now()
                 print(now,now.hour,now.minute)
                 if now.hour==time.hour and now.minute==time.minute:
-                    c.execute('delete from medications where id=?',(i[0],))
-                    conn.commit()
-                    conn.close()
                     print("printing email")
                     send_email(email)
-                    break
+                    tomorrow = date.today() + timedelta(1)
+                    tomorrow = datetime.combine(tomorrow,datetime.min.time())
+                    conn = sqlite3.connect('medications.db')
+                    c = conn.cursor()
+                    c.execute('update medications set start_date=? where id=?',(tomorrow,i[0],))
+                    conn.commit()
+                    conn.close()
+                    if date.today()==end_date:
+                        conn = sqlite3.connect('medications.db')
+                        c = conn.cursor()
+                        c.execute('delete from medications where id=?',(i[0],))
+                        conn.commit()
+                        conn.close()
 
-    
+
 # def reminder():
 #     now = datetime.now()
 #     print("Now:",now)
