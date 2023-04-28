@@ -3,6 +3,7 @@ from flask import Flask, render_template, request, redirect,flash
 import sqlite3
 import smtplib
 import os
+import bcrypt
 import io
 import base64
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
@@ -58,25 +59,40 @@ def loginCheck():
     password=request.form["password"]
     database_connection=sqlite3.connect("medications.db")
     database_cursor=database_connection.cursor()
-    database_cursor.execute("select * from register_user where email=? and password=? ",(email,password))
+    # database_cursor.execute("select * from register_user where email=? and password=? ",(email,password))
+    database_cursor.execute("select email from register_user where email=?",(email,))
     result=database_cursor.fetchone()
+    
     if result:
         global userId
-        userId=database_cursor.execute("select id from register_user where email=?",(email,))
-        userId=userId.fetchone()[0]
-        flash("Login Successful!",category='success')
-        return redirect('/home/')
-    else:
-        database_cursor.execute("select (email) from register_user where email=?",(email,))
-        email=database_cursor.fetchone()
-        database_connection.commit()
-        database_connection.close()
-        if email:
-         flash("Invalid Email or Password!",category='error')
-         return redirect('/login/')
+        database_cursor.execute("select password from register_user where email=?",(email,))
+        passw=database_cursor.fetchone()[0]
+        password=password.encode('utf-8')
+        if bcrypt.checkpw(password,passw):
+            userId=database_cursor.execute("select id from register_user where email=?",(email,))
+            userId=userId.fetchone()[0]
+            flash("Login Successful!",category='success')
+            return redirect('/home/')
         else:
-            flash("User not Registered with us, kindly Register!",category='error')
-            return redirect('/register/')
+            flash("Invalid Email or Password!",category='error')
+            return redirect('/login/')
+        # userId=database_cursor.execute("select id from register_user where email=?",(email,))
+        # userId=userId.fetchone()[0]
+        # flash("Login Successful!",category='success')
+        # return redirect('/home/')
+    else:
+        flash("User not Registered with us, kindly Register!",category='error')
+        return redirect('/register/')
+        # database_cursor.execute("select (email) from register_user where email=?",(email,))
+        # email=database_cursor.fetchone()
+        # database_connection.commit()
+        # database_connection.close()
+        # if email:
+        #  flash("Invalid Email or Password!",category='error')
+        #  return redirect('/login/')
+        # else:
+        #     flash("User not Registered with us, kindly Register!",category='error')
+        #     return redirect('/register/')
 
 @app.route("/register/")
 def register():
@@ -97,6 +113,8 @@ def registerAdd():
      elif len(password)<6:
         flash("Password must be atleast 6 character long",category='error')
         return redirect("/register/")
+     password=password.encode('utf-8')
+     password=bcrypt.hashpw(password,bcrypt.gensalt())
      database_cursor.execute("insert into register_user (name,email,password) values (?,?,?)",(name,email,password))
      database_connection.commit()
      database_connection.close()
@@ -310,7 +328,7 @@ def reminder():
                     send_email(email)
                     break
 
-
+    
 # def reminder():
 #     now = datetime.now()
 #     print("Now:",now)
