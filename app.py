@@ -267,8 +267,8 @@ def send_email(to_email,med_name):
     
     smtp_server = "smtp.gmail.com" 
     smtp_port = 587 
-    smtp_username = "healthxnoreply@gmail.com" 
-    smtp_password = "nsmtdnziqnvbveqr"
+    smtp_username = "healthxnoreply0@gmail.com" 
+    smtp_password = "yduvvgzozarlkxgd"
    
     message = MIMEMultipart()
     message['From'] = smtp_username
