@@ -27,7 +27,9 @@ import pandas as pd
 from flask import Flask, render_template , request , redirect , url_for, session
 from sklearn.naive_bayes import MultinomialNB
 # from db import *
+ch=True
 disease_prediction = Flask(__name__)
+
 l1=['itching','skin_rash','nodal_skin_eruptions','continuous_sneezing','shivering','chills','joint_pain',
     'stomach_pain','acidity','ulcers_on_tongue','muscle_wasting','vomiting','burning_micturition','spotting_ urination','fatigue',
     'weight_gain','anxiety','cold_hands_and_feets','mood_swings','weight_loss','restlessness','lethargy','patches_in_throat',
@@ -46,6 +48,7 @@ l1=['itching','skin_rash','nodal_skin_eruptions','continuous_sneezing','shiverin
     'receiving_blood_transfusion','receiving_unsterile_injections','coma','stomach_bleeding','distention_of_abdomen','history_of_alcohol_consumption',
     'fluid_overload','blood_in_sputum','prominent_veins_on_calf','palpitations','painful_walking','pus_filled_pimples','blackheads','scurring','skin_peeling',
     'silver_like_dusting','small_dents_in_nails','inflammatory_nails','blister','red_sore_around_nose','yellow_crust_ooze']
+
 @app.route("/")
 def index():
     return render_template("index.html")
@@ -152,7 +155,6 @@ def getsym():
     for x in range(0,len(l1)):
        l2.append(0)
 
-# TESTING DATA
     tr=pd.read_csv("Testing.csv")
     tr.replace({'prognosis':{'Fungal infection':0,'Allergy':1,'GERD':2,'Chronic cholestasis':3,'Drug Reaction':4,
    'Peptic ulcer diseae':5,'AIDS':6,'Diabetes ':7,'Gastroenteritis':8,'Bronchial Asthma':9,'Hypertension ':10,
@@ -168,7 +170,7 @@ def getsym():
     y_test = tr[["prognosis"]]
     np.ravel(y_test)
 
-    # TRAINING DATA
+
     df=pd.read_csv("Training.csv")
 
     df.replace({'prognosis':{'Fungal infection':0,'Allergy':1,'GERD':2,'Chronic cholestasis':3,'Drug Reaction':4,
@@ -292,6 +294,7 @@ def send_email(to_email,med_name):
 email = None
 @app.route("/add/", methods=['POST'])
 def add():
+    global ch
     print("In add")
     global email
     dose = request.form['dose']
@@ -305,17 +308,12 @@ def add():
               (email, dose, start_date, end_date,time))
     conn.commit()
     conn.close()
-
-    t1 = threading.Thread(target=reminder)
-    t1.start()
+    if(ch==True):
+        t1 = threading.Thread(target=reminder)
+        t1.start()
+        ch=False
     flash("Reminder set successfully!",category='success')
     return redirect("/medications/")
-
-@app.route("/medications/")
-def medications():
-    print("hello world")
-    return render_template("medications.html")
-
 def reminder():
     while(True):
         conn = sqlite3.connect('medications.db')
@@ -331,23 +329,26 @@ def reminder():
             start_date = datetime.strptime(str(i[3]), '%Y-%m-%d %H:%M:%S')
             start_date=start_date.date()
             time = datetime.strptime(i[5], '%H:%M').time()
-            print(date.today(),end_date)
-            print(type(date.today()),type(end_date))
+            # print(date.today(),end_date)
+            # print(type(date.today()),type(end_date))
             if date.today()>=start_date and date.today()<=end_date:
                 now=datetime.now()
-                print(now,now.hour,now.minute)
+                # print(now,now.hour,now.minute)
                 if now.hour==time.hour and now.minute==time.minute:
                     print("printing email")
                     send_email(email,med_name=i[2])
-                    notification.notify(
-                        title = "Reminder",
-                        message = "It's time to take your medicine ",
-                        timeout=20)
                     tomorrow = date.today() + timedelta(1)
                     tomorrow = datetime.combine(tomorrow,datetime.min.time())
                     conn = sqlite3.connect('medications.db')
                     c = conn.cursor()
+                    print("notification")
+                    notification.notify(
+                        title = "Reminder",
+                        message = "It's time to take your medicine ",
+                        timeout=20)
+                    print("updating database to next date",tomorrow)
                     c.execute('update medications set start_date=? where id=?',(tomorrow,i[0],))
+                    print("commit close")
                     conn.commit()
                     conn.close()
                     if date.today()==end_date:
@@ -356,6 +357,13 @@ def reminder():
                         c.execute('delete from medications where id=?',(i[0],))
                         conn.commit()
                         conn.close()
+
+@app.route("/medications/")
+def medications():
+    print("hello world")
+    return render_template("medications.html")
+
+
 
 
 # def reminder():
